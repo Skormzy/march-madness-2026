@@ -89,11 +89,11 @@
 <div class="hero">
   <div class="hero-label">Your Win Probability</div>
   <div class="hero-prob">4.3%</div>
-  <div class="hero-sublabel">Seymour #2 &bull; 9th place &bull; 2 pts behind 1st</div>
+  <div class="hero-sublabel">Seymour #2 &bull; T-5th place &bull; 2 pts behind 1st</div>
   <div class="hero-status status-alive">BRACKET ALIVE &mdash; MICHIGAN ADVANCES TO SWEET 16</div>
   <div class="hero-stats">
     <div class="hero-stat">
-      <div class="hero-stat-val">28</div>
+      <div class="hero-stat-val">30</div>
       <div class="hero-stat-label">Current Points</div>
     </div>
     <div class="hero-stat">
@@ -116,7 +116,7 @@
   <h3 style="color:#51cf66; margin-top:0;">The Bottom Line</h3>
   <div class="bl-item">
     <div class="bl-icon">&#127942;</div>
-    <div class="bl-text"><strong>You can absolutely win this pool.</strong> Monte Carlo simulation (50,000 runs) gives you a 4.3% win probability — well above the 2.5% average in a 40-person pool. Only 2 points back with 158 still in play.</div>
+    <div class="bl-text"><strong>You can absolutely win this pool.</strong> Monte Carlo simulation (50,000 runs) gives you a 4.5% win probability — well above the 2.5% average in a 40-person pool. Only 2 points back with 156 still in play.</div>
   </div>
   <div class="bl-item">
     <div class="bl-icon">&#127936;</div>
@@ -160,19 +160,19 @@ const PROBS = {
 // Probability history over time — each entry has arrays of probabilities for each snapshot
 // Format: {labels: [...], entries: {name: [prob_at_t0, prob_at_t1, ...]}}
 const probTimeline = {
-  labels: ["Pre-Tournament", "After Round 1", "Michigan W"],
+  labels: ["Pre-Tournament", "After Round 1", "Michigan W", "Mich. St. W"],
   entries: {
-    "Seymour #2":    [2.5, 4.1, 4.3],
-    "Suge Knight":   [2.5, 1.9, 1.9],
-    "Trevor":        [2.5, 0.9, 0.9],
-    "jac #2":        [2.5, 1.9, 1.9],
-    "Thomas9712w":   [2.5, 3.5, 3.7],
-    "Billy O":       [2.5, 7.9, 7.9],
-    "Scott Carrick": [2.5, 4.9, 4.9],
-    "B Crew":        [2.5, 4.1, 4.1],
-    "Doaners_picks": [2.5, 4.1, 4.1],
-    "Slamdunk2026":  [2.5, 6.4, 6.4],
-    "Josh Carrick":  [2.5, 6.2, 6.2],
+    "Seymour #2":    [2.5, 4.1, 4.3, 4.5],
+    "Suge Knight":   [2.5, 1.9, 1.9, 2.0],
+    "Trevor":        [2.5, 0.9, 0.9, 0.9],
+    "jac #2":        [2.5, 1.9, 1.9, 1.9],
+    "Thomas9712w":   [2.5, 3.5, 3.7, 3.7],
+    "Billy O":       [2.5, 7.9, 7.9, 7.9],
+    "Scott Carrick": [2.5, 4.9, 4.9, 4.9],
+    "B Crew":        [2.5, 4.1, 4.1, 4.2],
+    "Doaners_picks": [2.5, 4.1, 4.1, 4.2],
+    "Slamdunk2026":  [2.5, 6.4, 6.4, 6.4],
+    "Josh Carrick":  [2.5, 6.2, 6.2, 6.2],
   }
 };
 
@@ -257,25 +257,25 @@ new Chart(ctx, {
 <div class="card">
 <table class="standings-table">
   <tr><th>#</th><th>Entry</th><th>Pts</th><th>Max</th><th>Champion</th><th>Win %</th></tr>
-  <tr><td>1</td><td>Suge Knight <span class="tag tag-leader">LEADER</span></td><td>30</td><td>188</td><td>Arizona</td><td style="color:#ff6b6b;">1.9%</td></tr>
-  <tr><td>1</td><td>Trevor <span class="tag tag-leader">LEADER</span></td><td>30</td><td>182</td><td>Michigan</td><td style="color:#ff6b6b;">0.9%</td></tr>
-  <tr><td>3</td><td>jac #2</td><td>29</td><td>187</td><td>Arizona</td><td>1.9%</td></tr>
-  <tr><td>3</td><td>RamFan</td><td>29</td><td>187</td><td>Arizona</td><td>1.9%</td></tr>
-  <tr><td>3</td><td>Thomas9712w</td><td>29</td><td>187</td><td>Michigan</td><td style="color:#ffd43b;">3.5%</td></tr>
-  <tr><td>3</td><td>Thomas9712w #2</td><td>29</td><td>187</td><td>Arizona</td><td>1.4%</td></tr>
-  <tr><td>3</td><td>Scott Carrick</td><td>29</td><td>185</td><td>Vanderbilt</td><td style="color:#ffd43b;">4.9%</td></tr>
-  <tr><td>3</td><td>Janer #2</td><td>29</td><td>173</td><td>Connecticut</td><td>1.0%</td></tr>
-  <tr class="you"><td>9</td><td>Seymour #2 <span class="tag tag-you">YOU</span></td><td>28</td><td>186</td><td>Michigan</td><td style="color:#00e5cc;font-weight:bold;">4.3%</td></tr>
-  <tr><td>9</td><td>B Crew</td><td>28</td><td>186</td><td>Florida</td><td>4.1%</td></tr>
-  <tr><td>9</td><td>Doaners_picks</td><td>28</td><td>186</td><td>Duke</td><td>4.1%</td></tr>
-  <tr><td>9</td><td>Billy O</td><td>28</td><td>184</td><td>Houston</td><td style="color:#51cf66;font-weight:bold;">7.9%</td></tr>
-  <tr><td>9</td><td>C6Z06</td><td>28</td><td>184</td><td>Florida</td><td>3.0%</td></tr>
-  <tr><td>9</td><td>PCraig</td><td>28</td><td>184</td><td>Duke</td><td>4.7%</td></tr>
-  <tr><td>31</td><td>Slamdunk2026</td><td>25</td><td>183</td><td>Duke</td><td style="color:#51cf66;">6.4%</td></tr>
+  <tr><td>1</td><td>Suge Knight <span class="tag tag-leader">LEADER</span></td><td>32</td><td>188</td><td>Arizona</td><td style="color:#ff6b6b;">2.0%</td></tr>
+  <tr><td>2</td><td>RamFan</td><td>31</td><td>187</td><td>Arizona</td><td>2.0%</td></tr>
+  <tr><td>2</td><td>Thomas9712w</td><td>31</td><td>187</td><td>Michigan</td><td style="color:#ffd43b;">3.7%</td></tr>
+  <tr><td>2</td><td>Thomas9712w #2</td><td>31</td><td>187</td><td>Arizona</td><td>1.5%</td></tr>
+  <tr><td>2</td><td>Janer #2</td><td>31</td><td>173</td><td>Connecticut</td><td>1.1%</td></tr>
+  <tr><td>6</td><td>Trevor</td><td>30</td><td>182</td><td>Michigan</td><td style="color:#ff6b6b;">0.9%</td></tr>
+  <tr><td>6</td><td>jac #2</td><td>29</td><td>187</td><td>Arizona</td><td>1.9%</td></tr>
+  <tr><td>6</td><td>Scott Carrick</td><td>29</td><td>185</td><td>Vanderbilt</td><td style="color:#ffd43b;">4.9%</td></tr>
+  <tr class="you"><td>6</td><td>Seymour #2 <span class="tag tag-you">YOU</span></td><td>30</td><td>186</td><td>Michigan</td><td style="color:#00e5cc;font-weight:bold;">4.5%</td></tr>
+  <tr><td>6</td><td>B Crew</td><td>30</td><td>186</td><td>Florida</td><td>4.2%</td></tr>
+  <tr><td>6</td><td>Doaners_picks</td><td>30</td><td>186</td><td>Duke</td><td>4.2%</td></tr>
+  <tr><td>6</td><td>Billy O</td><td>30</td><td>184</td><td>Houston</td><td style="color:#51cf66;font-weight:bold;">7.9%</td></tr>
+  <tr><td>6</td><td>C6Z06</td><td>30</td><td>184</td><td>Florida</td><td>3.1%</td></tr>
+  <tr><td>6</td><td>PCraig</td><td>30</td><td>184</td><td>Duke</td><td>4.8%</td></tr>
+  <tr><td>29</td><td>Slamdunk2026</td><td>25</td><td>183</td><td>Duke</td><td style="color:#51cf66;">6.4%</td></tr>
   <tr><td>18</td><td>Josh Carrick</td><td>27</td><td>173</td><td>Iowa St.</td><td style="color:#51cf66;">6.2%</td></tr>
 </table>
-<p style="font-size:12px; color:#666; margin-top:10px;">Showing top entries + highest win probabilities. Win% from Monte Carlo simulation (50K runs). Your "Seymour" entry is 26th (0.7%).</p>
-<p style="font-size:12px; color:#888; margin-top:5px;">Note: Points leaders (Suge Knight, Trevor) have lower sim probability because their remaining brackets are more reliant on specific upsets. Entries like Billy O, Slamdunk2026, and Josh Carrick have contrarian picks that pay off in more simulated scenarios.</p>
+<p style="font-size:12px; color:#666; margin-top:10px;">Showing top entries + highest win probabilities. Win% from Monte Carlo simulation (50K runs). Your "Seymour" entry is ~26th (0.7%).</p>
+<p style="font-size:12px; color:#888; margin-top:5px;">Note: Points leader Suge Knight has lower sim probability because his remaining bracket is reliant on specific upsets (Arizona champion). Seymour #2 moved from 9th → T-5th after Michigan State win. Entries like Billy O, Slamdunk2026, and Josh Carrick have contrarian picks that pay off in more simulated scenarios. Tonight's Gonzaga vs Texas (7:10 PM) is the key separation game.</p>
 </div>
 
 <!-- ==================== TODAY'S GAMES ==================== -->
@@ -292,11 +292,11 @@ new Chart(ctx, {
 
   <div class="game-card">
     <div class="game-teams">
-      <strong>(6) Louisville vs (3) Michigan State</strong> &mdash; East, 2:45 PM
-      <div class="pick-compare">You: <span class="pick-diff">Mich. St.</span> | Suge Knight: Mich. St. | Trevor: <span class="pick-diff">Louisville</span> | jac #2: Louisville</div>
-      <div class="game-note">Mich. St. win = +2 you, -2 Trevor & jac #2. Suge Knight also benefits.</div>
+      <strong>(6) Louisville vs (3) Michigan State</strong> &mdash; East &mdash; <span style="color:#51cf66;">✅ FINAL: Michigan State 77, Louisville 69</span>
+      <div class="pick-compare">You: <span class="pick-diff">Mich. St. ✓</span> | Suge Knight: Mich. St. ✓ | Trevor: <span class="pick-diff">Louisville ✗</span> | jac #2: Louisville ✗</div>
+      <div class="game-note">Michigan State advances to Sweet 16! +2 for you &amp; Suge Knight. Trevor &amp; jac #2 get nothing here.</div>
     </div>
-    <div class="game-impact"><span class="root-for">MICH. ST.</span></div>
+    <div class="game-impact"><span class="root-for">✅ WON</span></div>
   </div>
 
   <div class="game-card">
