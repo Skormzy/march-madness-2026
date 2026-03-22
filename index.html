@@ -13,653 +13,307 @@
   h2 { color: #00e5cc; font-size: 20px; margin: 30px 0 15px; border-bottom: 2px solid #1a2d3d; padding-bottom: 8px; }
   h3 { color: #7ec8e3; font-size: 16px; margin: 20px 0 10px; }
   .subtitle { color: #888; font-size: 14px; margin-bottom: 25px; }
+  .update-badge { font-size: 12px; color: #888; font-weight: normal; background: #1a2d3d; padding: 3px 10px; border-radius: 12px; margin-left: 10px; }
   .card { background: #141b24; border-radius: 12px; padding: 20px; margin: 15px 0; border: 1px solid #1e2a36; }
-  .card-highlight { border-left: 4px solid #00e5cc; }
-  .card-warning { border-left: 4px solid #ff6b6b; }
-  .card-good { border-left: 4px solid #51cf66; }
-
-  /* Hero probability section */
   .hero { text-align: center; padding: 30px 20px; margin-bottom: 20px; background: linear-gradient(135deg, #0d1a26 0%, #142233 50%, #0d1a26 100%); border-radius: 16px; border: 1px solid #1e3a5f; }
   .hero-prob { font-size: 72px; font-weight: 800; color: #00e5cc; line-height: 1; margin: 10px 0; text-shadow: 0 0 40px rgba(0,229,204,0.3); }
   .hero-label { font-size: 16px; color: #7ec8e3; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
   .hero-sublabel { font-size: 14px; color: #888; margin-top: 8px; }
-  .hero-stats { display: flex; justify-content: center; gap: 40px; margin-top: 25px; padding-top: 20px; border-top: 1px solid #1e3a5f; }
+  .hero-stats { display: flex; justify-content: center; gap: 40px; margin-top: 25px; padding-top: 20px; border-top: 1px solid #1e3a5f; flex-wrap: wrap; }
   .hero-stat { text-align: center; }
   .hero-stat-val { font-size: 28px; font-weight: 700; color: #e0e0e0; }
   .hero-stat-label { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
-  .hero-status { display: inline-block; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-top: 15px; }
-  .status-alive { background: rgba(81,207,102,0.15); color: #51cf66; border: 1px solid rgba(81,207,102,0.3); }
-  .status-strong { background: rgba(0,229,204,0.15); color: #00e5cc; border: 1px solid rgba(0,229,204,0.3); }
-
-  /* Chart */
+  .hero-status { display: inline-block; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-top: 15px; background: rgba(81,207,102,0.15); color: #51cf66; border: 1px solid rgba(81,207,102,0.3); }
   .chart-container { background: #141b24; border-radius: 12px; padding: 20px; margin: 15px 0; border: 1px solid #1e2a36; }
   .chart-wrapper { position: relative; height: 320px; }
-
-  /* Bottom line */
   .bottom-line-card { background: linear-gradient(135deg, #0d2818 0%, #142233 100%); border: 1px solid #1a4a2a; border-radius: 12px; padding: 24px; margin: 15px 0; }
   .bl-item { display: flex; gap: 12px; align-items: flex-start; margin: 12px 0; }
   .bl-icon { font-size: 20px; width: 28px; text-align: center; flex-shrink: 0; }
   .bl-text { font-size: 15px; line-height: 1.5; }
-
-  /* Standings */
   .standings-table { width: 100%; border-collapse: collapse; margin: 10px 0; }
   .standings-table th { background: #0a0e14; color: #00e5cc; text-align: left; padding: 10px 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
   .standings-table td { padding: 10px 12px; border-bottom: 1px solid #1e2a36; font-size: 14px; }
   .standings-table tr.you { background: rgba(0, 229, 204, 0.08); }
   .standings-table tr.you td { color: #00e5cc; font-weight: bold; }
   .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; }
-  .tag-you { background: #00e5cc; color: #0a0e14; }
-  .tag-leader { background: #ff6b6b; color: white; }
-
-  /* Games */
-  .game-card { display: flex; gap: 15px; align-items: center; padding: 14px 0; border-bottom: 1px solid #1e2a36; }
+  .tag-leader { background: rgba(255,215,0,0.15); color: #ffd700; }
+  .tag-you { background: rgba(0,229,204,0.15); color: #00e5cc; }
+  .game-card { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #1e2a36; }
   .game-card:last-child { border-bottom: none; }
   .game-teams { flex: 1; }
-  .game-teams strong { font-size: 15px; }
-  .game-impact { text-align: right; min-width: 160px; }
-  .root-for { color: #51cf66; font-weight: bold; font-size: 14px; }
-  .root-against { color: #ff6b6b; font-weight: bold; font-size: 14px; }
-  .impact-neutral { color: #888; font-size: 14px; }
+  .game-teams strong { font-size: 14px; }
   .pick-compare { font-size: 12px; color: #888; margin-top: 4px; }
-  .game-note { font-size: 12px; color: #ffd43b; padding: 4px 0; margin-top: 4px; }
-  .pick-diff { color: #ffd43b; }
-  .pick-match { color: #51cf66; }
-
+  .game-impact { text-align: right; min-width: 90px; }
+  .root-for { background: rgba(81,207,102,0.15); color: #51cf66; padding: 4px 12px; border-radius: 8px; font-size: 12px; font-weight: bold; }
+  .root-against { background: rgba(255,107,107,0.15); color: #ff6b6b; padding: 4px 12px; border-radius: 8px; font-size: 12px; font-weight: bold; }
+  .impact-neutral { background: rgba(136,136,136,0.15); color: #888; padding: 4px 12px; border-radius: 8px; font-size: 12px; font-weight: bold; }
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-  .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; }
-  p { line-height: 1.6; margin: 8px 0; }
-
-  .update-badge { display: inline-block; background: rgba(0,229,204,0.1); color: #00e5cc; padding: 4px 12px; border-radius: 12px; font-size: 12px; margin-left: 10px; }
-
-  @media (max-width: 700px) {
-    .grid-2, .grid-4 { grid-template-columns: 1fr; }
-    .hero-stats { flex-wrap: wrap; gap: 20px; }
-    .hero-prob { font-size: 56px; }
-    .game-card { flex-direction: column; align-items: flex-start; }
-    .game-impact { text-align: left; }
-  }
+  @media (max-width: 700px) { .grid-2 { grid-template-columns: 1fr; } .hero-stats { gap: 20px; } }
 </style>
 </head>
 <body>
 
-<h1>White Owl March Madness 2026 <span class="update-badge">Last updated: Mar 22, 12:00 PM ET</span></h1>
-<p class="subtitle">Seymour's Pool Tracker &bull; 40 Entries &bull; Round 2 Day 2</p>
+<h1>White Owl March Madness 2026 <span class="update-badge">Last updated: Mar 22, 2:31 PM EDT</span></h1>
+<p class="subtitle">Seymour's Pool Tracker &bull; 40 Entries &bull; Auto-updated via GitHub Actions</p>
 
-<!-- ==================== HERO: WIN PROBABILITY ==================== -->
+<!-- HERO -->
 <div class="hero">
   <div class="hero-label">Your Win Probability</div>
-  <div class="hero-prob">3.0%</div>
+  <div class="hero-prob">2.8%</div>
   <div class="hero-sublabel">Seymour #2 &bull; T-8th place &bull; 5 pts behind 1st</div>
-  <div class="hero-status status-alive">BRACKET ALIVE &mdash; MICHIGAN IN SWEET 16</div>
+  <div class="hero-status">BRACKET ALIVE &mdash; MICHIGAN STILL IN</div>
   <div class="hero-stats">
-    <div class="hero-stat">
-      <div class="hero-stat-val">38</div>
-      <div class="hero-stat-label">Current Points</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-val">182</div>
-      <div class="hero-stat-label">Max Possible</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-val">T-8th</div>
-      <div class="hero-stat-label">Current Place</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-val">144</div>
-      <div class="hero-stat-label">Points Remaining</div>
-    </div>
+    <div class="hero-stat"><div class="hero-stat-val">40</div><div class="hero-stat-label">Current Points</div></div>
+    <div class="hero-stat"><div class="hero-stat-val">182</div><div class="hero-stat-label">Max Possible</div></div>
+    <div class="hero-stat"><div class="hero-stat-val">T-8th</div><div class="hero-stat-label">Current Place</div></div>
+    <div class="hero-stat"><div class="hero-stat-val">142</div><div class="hero-stat-label">Points Remaining</div></div>
   </div>
 </div>
 
-<!-- ==================== KEY TAKEAWAYS ==================== -->
+<!-- BOTTOM LINE -->
 <div class="bottom-line-card">
   <h3 style="color:#51cf66; margin-top:0;">The Bottom Line</h3>
-  <div class="bl-item">
-    <div class="bl-icon">&#127942;</div>
-    <div class="bl-text"><strong>Still alive but the gap grew.</strong> You're 5 pts behind Thomas9712w (43 pts) who nailed both Nebraska and Arkansas. Your 3.0% win probability is above the 2.5% pool average. 144 pts still in play across 8 remaining R2 games + later rounds.</div>
+  <div class="bl-item"><div class="bl-icon">&#127942;</div>
+    <div class="bl-text"><strong>Still very much alive.</strong> You're 5 pts behind Thomas9712w (45 pts). Your 2.8% win probability is above the 2.5% pool average. 142 pts still in play.</div>
   </div>
-  <div class="bl-item">
-    <div class="bl-icon">&#127936;</div>
-    <div class="bl-text"><strong>Yesterday: 6-for-8 in R2.</strong> Got Michigan, Duke, MSU, Houston, Illinois, and Arkansas right. Missed Gonzaga (Texas upset) and Vanderbilt (Nebraska edged them 74-72). Your S16 bracket path is still fully intact.</div>
+  <div class="bl-item"><div class="bl-icon">&#127936;</div>
+    <div class="bl-text"><strong>Your champion: Michigan (ALIVE).</strong> Michigan is still in the tournament. Every Michigan win adds to your point total and boosts your probability.</div>
   </div>
-  <div class="bl-item">
-    <div class="bl-icon">&#9888;&#65039;</div>
-    <div class="bl-text"><strong>Biggest threat: Thomas9712w</strong> (1st, 43 pts, Michigan champ, 185 max). He has your same champion pick and a 5-pt lead. Suge Knight (2nd, 42 pts) has Arizona as champ. Both gained ground with Nebraska/Arkansas picks.</div>
-  </div>
-  <div class="bl-item">
-    <div class="bl-icon">&#9989;</div>
-    <div class="bl-text"><strong>Vandy loss hurts your South bracket.</strong> You had Vandy advancing to S16 (Florida over Vandy). Now Nebraska is there instead, which breaks that pick. But your champion path through Michigan is untouched.</div>
-  </div>
-  <div class="bl-item">
-    <div class="bl-icon">&#128200;</div>
-    <div class="bl-text"><strong>8 games today (Mar 22).</strong> Key ones: Kansas (you picked them), UConn (need for East run), Purdue (you need over Miami), Texas Tech (your S16 pick). Big day to close the gap.</div>
+  <div class="bl-item"><div class="bl-icon">&#9888;&#65039;</div>
+    <div class="bl-text"><strong>Biggest threat: Thomas9712w</strong> (1st, 45 pts, Michigan champ, 187 max).</div>
   </div>
 </div>
 
-<!-- ==================== PROBABILITY CHART ==================== -->
+<!-- PROBABILITY CHART -->
 <div class="chart-container">
   <h3 style="margin-top:0; margin-bottom: 15px;">Win Probability Over Time</h3>
-  <div class="chart-wrapper">
-    <canvas id="probChart"></canvas>
-  </div>
+  <div class="chart-wrapper"><canvas id="probChart"></canvas></div>
 </div>
-
 <script>
-// ===== ALL ENTRIES PROBABILITY DATA =====
-// Calculated via Monte Carlo simulation (50,000 tournament outcomes)
-const PROBS = {
-  "Suge Knight":4.5,"Trevor":0.8,"jac #2":2.0,"RamFan":2.0,"Thomas9712w":6.2,"Thomas9712w #2":1.8,
-  "Scott Carrick":3.5,"Janer #2":0.7,"B Crew":3.2,"Doaners_picks":3.5,"Seymour #2":3.0,"Billy O":5.8,
-  "C6Z06":2.5,"PCraig":3.8,"B Crew #2":0.8,"Lisa K":0.9,"BlairMac #2":2.5,"canadiens":3.5,"Canman1":1.4,
-  "Daniel":4.2,"Go Canada":1.3,"BlairMac":1.8,"joeyjohnson":3.0,"Slamdunk2026 #2":1.8,"Josh Carrick":4.5,
-  "Go Canada #2":0.9,"Seagulljon":3.2,"Paul McGuigan":0.4,"Seymour":0.5,"RJH":0.7,"Slamdunk2026":5.8,
-  "Kim Burns #2":1.6,"SimonT":1.1,"jac":0.2,"TrevorYC":2.2,"AL":1.1,"steviesizzle86":0.2,
-  "Scott Carrick2":0.0,"Jake Carrick":1.1,"Janer":0.2
-};
-
-// Probability history over time — each entry has arrays of probabilities for each snapshot
-// Format: {labels: [...], entries: {name: [prob_at_t0, prob_at_t1, ...]}}
-const probTimeline = {
-  labels: ["Pre-Tourn.", "After R1", "Michigan W", "MSU W", "Duke W", "Houston W", "Gonzaga L", "Illinois W", "Nebraska W", "Arkansas W"],
-  entries: {
-    "Seymour #2":    [2.5, 4.1, 4.3, 4.5, 4.5, 4.4, 3.4, 3.2, 3.1, 3.0],
-    "Suge Knight":   [2.5, 1.9, 1.9, 2.0, 2.2, 2.4, 4.2, 4.8, 4.6, 4.5],
-    "Trevor":        [2.5, 0.9, 0.9, 0.9, 0.8, 0.7, 0.6, 0.6, 0.7, 0.8],
-    "jac #2":        [2.5, 1.9, 1.9, 1.9, 1.8, 1.7, 1.5, 1.5, 1.8, 2.0],
-    "Thomas9712w":   [2.5, 3.5, 3.7, 3.7, 4.0, 4.5, 5.2, 5.5, 5.8, 6.2],
-    "Billy O":       [2.5, 7.9, 7.9, 7.9, 7.5, 7.0, 6.8, 6.5, 6.0, 5.8],
-    "Scott Carrick": [2.5, 4.9, 4.9, 4.9, 4.8, 4.5, 4.0, 3.8, 3.6, 3.5],
-    "B Crew":        [2.5, 4.1, 4.1, 4.2, 4.0, 3.8, 3.6, 3.5, 3.3, 3.2],
-    "Doaners_picks": [2.5, 4.1, 4.1, 4.2, 4.2, 4.0, 3.9, 3.8, 3.6, 3.5],
-    "Slamdunk2026":  [2.5, 6.4, 6.4, 6.4, 6.2, 5.8, 5.6, 5.5, 5.6, 5.8],
-    "Josh Carrick":  [2.5, 6.2, 6.2, 6.2, 5.8, 5.4, 5.2, 5.0, 4.8, 4.5],
-  }
-};
-
-// Top entries to show on chart (your entry + top probability entries + leaders)
-const CHART_ENTRIES = [
-  {name:"Seymour #2", color:"#00e5cc", width:4, dash:[]},
-  {name:"Seymour",    color:"rgba(0,229,204,0.4)", width:2, dash:[5,5], hidden:true},
-  {name:"Billy O",    color:"#ff6b6b", width:2, dash:[]},
-  {name:"Slamdunk2026",color:"#ffd43b", width:2, dash:[]},
-  {name:"Josh Carrick",color:"#a78bfa", width:2, dash:[]},
-  {name:"Scott Carrick",color:"#f97316", width:2, dash:[]},
-  {name:"Suge Knight", color:"#ff6b6b", width:1.5, dash:[4,4]},
-  {name:"Trevor",      color:"#64748b", width:1.5, dash:[4,4]},
-  {name:"Thomas9712w",color:"#22d3ee", width:1.5, dash:[]},
-  {name:"B Crew",      color:"#84cc16", width:1.5, dash:[]},
-  {name:"Doaners_picks",color:"#ec4899", width:1.5, dash:[]},
-];
+const PROBS = {"Suge Knight":1.7,"Trevor":0.1,"jac #2":1.3,"RamFan":1.6,"Thomas9712w":10.4,"Thomas9712w #2":1.2,"Scott Carrick":4.8,"Janer #2":0.7,"B Crew":2.4,"Doaners_picks":3.4,"Seymour #2":2.8,"Billy O":8.1,"C6Z06":2.9,"PCraig":5.9,"B Crew #2":0.9,"Lisa K":1.1,"BlairMac #2":2.3,"canadiens":3.8,"Canman1":1.5,"Daniel":9.5,"Go Canada":1.1,"BlairMac":2.4,"joeyjohnson":4.2,"Slamdunk2026 #2":2.1,"Josh Carrick":5.4,"Go Canada #2":1.2,"Seagulljon":2.8,"Seymour":1.2,"RJH":0,"Slamdunk2026":1.6,"Kim Burns #2":1.3,"SimonT":1.2,"jac":0.2,"TrevorYC":2.9,"AL":2.2,"steviesizzle86":0.1,"Scott Carrick2":0,"Jake Carrick":2.1,"Janer":0.5,"Paul McGuigan":1.2};
+const probTimeline = {"labels":["Pre-Tourn.","After R1","Michigan W","MSU W","Duke W","Houston W","Gonzaga L","Illinois W","Nebraska W","Arkansas W","Purdue W"],"data":{"Seymour #2":[2.5,4.1,4.3,4.5,4.5,4.4,3.4,3.2,3.1,3,2.8],"Suge Knight":[2.5,1.9,1.9,2,2.2,2.4,4.2,4.8,4.6,4.5,1.7],"Trevor":[2.5,0.9,0.9,0.9,0.8,0.7,0.6,0.6,0.7,0.8,0.1],"jac #2":[2.5,1.9,1.9,1.9,1.8,1.7,1.5,1.5,1.8,2,1.3],"Thomas9712w":[2.5,3.5,3.7,3.7,4,4.5,5.2,5.5,5.8,6.2,10.4],"Billy O":[2.5,7.9,7.9,7.9,7.5,7,6.8,6.5,6,5.8,8.1],"Scott Carrick":[2.5,4.9,4.9,4.9,4.8,4.5,4,3.8,3.6,3.5,4.8],"B Crew":[2.5,4.1,4.1,4.2,4,3.8,3.6,3.5,3.3,3.2,2.4],"Doaners_picks":[2.5,4.1,4.1,4.2,4.2,4,3.9,3.8,3.6,3.5,3.4],"Slamdunk2026":[2.5,6.4,6.4,6.4,6.2,5.8,5.6,5.5,5.6,5.8,1.6],"Josh Carrick":[2.5,6.2,6.2,6.2,5.8,5.4,5.2,5,4.8,4.5,5.4]}};
+const CHART_ENTRIES = [{"name":"Seymour #2","color":"#00e5cc","width":4,"dash":"[]"},{"name":"Seymour","color":"rgba(0,229,204,0.4)","width":2,"dash":"[5,5]","hidden":true},{"name":"Thomas9712w","color":"#22d3ee","width":2,"dash":"[]"},{"name":"Suge Knight","color":"#ff6b6b","width":2,"dash":"[4,4]"},{"name":"Billy O","color":"#ffd43b","width":2,"dash":"[]"},{"name":"Slamdunk2026","color":"#a78bfa","width":2,"dash":"[]"},{"name":"Scott Carrick","color":"#f97316","width":1.5,"dash":"[]"},{"name":"Daniel","color":"#84cc16","width":1.5,"dash":"[]"},{"name":"B Crew","color":"#ec4899","width":1.5,"dash":"[]"},{"name":"Doaners_picks","color":"#64748b","width":1.5,"dash":"[4,4]"}];
 
 const datasets = CHART_ENTRIES.map(e => ({
   label: e.name + (PROBS[e.name] !== undefined ? ' (' + PROBS[e.name] + '%)' : ''),
-  data: probTimeline.entries[e.name] || [2.5, PROBS[e.name] || 2.5],
-  borderColor: e.color,
-  backgroundColor: e.name === "Seymour #2" ? 'rgba(0,229,204,0.06)' : 'transparent',
-  borderWidth: e.width,
-  borderDash: e.dash,
-  fill: e.name === "Seymour #2",
-  tension: 0.3,
-  pointRadius: e.name === "Seymour #2" ? 5 : 3,
-  pointBackgroundColor: e.color,
+  data: probTimeline.data[e.name] || [2.5, PROBS[e.name] || 2.5],
+  borderColor: e.color, backgroundColor: e.name === "Seymour #2" ? 'rgba(0,229,204,0.06)' : 'transparent',
+  borderWidth: e.width, borderDash: JSON.parse(e.dash), fill: e.name === "Seymour #2",
+  tension: 0.3, pointRadius: e.name === "Seymour #2" ? 5 : 3, pointBackgroundColor: e.color,
   hidden: e.hidden || false,
 }));
 
-const ctx = document.getElementById('probChart').getContext('2d');
-new Chart(ctx, {
-  type: 'line',
-  data: { labels: probTimeline.labels, datasets: datasets },
+new Chart(document.getElementById('probChart').getContext('2d'), {
+  type: 'line', data: { labels: probTimeline.labels, datasets },
   options: {
-    responsive: true,
-    maintainAspectRatio: false,
+    responsive: true, maintainAspectRatio: false,
     interaction: { intersect: false, mode: 'index' },
     plugins: {
-      legend: {
-        display: true,
-        position: 'bottom',
-        labels: { color: '#888', font: { size: 11 }, boxWidth: 20, padding: 12, usePointStyle: true }
-      },
-      tooltip: {
-        backgroundColor: 'rgba(20,27,36,0.95)',
-        borderColor: '#1e3a5f',
-        borderWidth: 1,
-        titleColor: '#00e5cc',
-        bodyColor: '#e0e0e0',
-        padding: 12,
-        callbacks: {
-          label: function(context) { return context.dataset.label.split(' (')[0] + ': ' + context.parsed.y + '%'; }
-        }
-      },
-      annotation: {
-        annotations: {
-          avgLine: {
-            type: 'line', yMin: 2.5, yMax: 2.5,
-            borderColor: 'rgba(255,255,255,0.15)', borderWidth: 1, borderDash: [6,4],
-            label: { display: true, content: 'Pool avg (2.5%)', position: 'start', color: '#666', font: {size:10}, backgroundColor: 'transparent' }
-          }
-        }
-      }
+      legend: { display: true, position: 'bottom', labels: { color: '#888', font: { size: 11 }, boxWidth: 20, padding: 12, usePointStyle: true } },
+      tooltip: { backgroundColor: 'rgba(20,27,36,0.95)', borderColor: '#1e3a5f', borderWidth: 1, titleColor: '#00e5cc', bodyColor: '#e0e0e0', padding: 12,
+        callbacks: { label: ctx => ctx.dataset.label.split(' (')[0] + ': ' + ctx.parsed.y + '%' } },
+      annotation: { annotations: { avgLine: { type: 'line', yMin: 2.5, yMax: 2.5, borderColor: 'rgba(255,255,255,0.15)', borderWidth: 1, borderDash: [6,4],
+        label: { display: true, content: 'Pool avg (2.5%)', position: 'start', color: '#666', font: {size:10}, backgroundColor: 'transparent' } } } }
     },
     scales: {
       x: { ticks: { color: '#888', font: { size: 11 } }, grid: { color: 'rgba(30,42,54,0.5)' } },
-      y: {
-        min: 0, max: Math.ceil(Math.max(...Object.values(PROBS)) + 1.5),
-        ticks: { color: '#888', font: { size: 11 }, callback: v => v + '%', stepSize: 1 },
-        grid: { color: 'rgba(30,42,54,0.5)' }
-      }
+      y: { min: 0, max: 12, ticks: { color: '#888', font: { size: 11 }, callback: v => v + '%', stepSize: 1 }, grid: { color: 'rgba(30,42,54,0.5)' } }
     }
   }
 });
 </script>
 
-<!-- ==================== STANDINGS ==================== -->
+<!-- STANDINGS -->
 <h2>Current Standings</h2>
 <div class="card">
 <table class="standings-table">
   <tr><th>#</th><th>Entry</th><th>Pts</th><th>Max</th><th>Champion</th><th>Win %</th></tr>
-  <tr><td>1</td><td>Thomas9712w <span class="tag tag-leader">LEADER</span></td><td>43</td><td>185</td><td>Michigan</td><td style="color:#ffd43b;">6.2%</td></tr>
-  <tr><td>2</td><td>Suge Knight</td><td>42</td><td>186</td><td>Arizona</td><td style="color:#ff6b6b;">4.5%</td></tr>
-  <tr><td>3</td><td>Thomas9712w #2</td><td>41</td><td>185</td><td>Arizona</td><td>1.8%</td></tr>
-  <tr><td>4</td><td>jac #2</td><td>39</td><td>181</td><td>Arizona</td><td>2.0%</td></tr>
-  <tr><td>4</td><td>RamFan</td><td>39</td><td>183</td><td>Arizona</td><td>2.0%</td></tr>
-  <tr><td>4</td><td>canadiens</td><td>39</td><td>179</td><td>Florida</td><td>3.5%</td></tr>
-  <tr><td>4</td><td>Daniel</td><td>39</td><td>183</td><td>Arizona</td><td>4.2%</td></tr>
-  <tr class="you"><td>8</td><td>Seymour #2 <span class="tag tag-you">YOU</span></td><td>38</td><td>182</td><td>Michigan</td><td style="color:#00e5cc;font-weight:bold;">3.0%</td></tr>
-  <tr><td>8</td><td>B Crew</td><td>38</td><td>178</td><td>Florida</td><td>3.2%</td></tr>
-  <tr><td>8</td><td>Doaners_picks</td><td>38</td><td>178</td><td>Duke</td><td>3.5%</td></tr>
-  <tr><td>8</td><td>Lisa K</td><td>38</td><td>178</td><td>Arizona</td><td>0.9%</td></tr>
-  <tr><td>8</td><td>PCraig</td><td>38</td><td>176</td><td>Duke</td><td>3.8%</td></tr>
-  <tr><td>13</td><td>Slamdunk2026</td><td>37</td><td>153</td><td>Duke</td><td style="color:#51cf66;">5.8%</td></tr>
-  <tr><td>20</td><td>Billy O</td><td>36</td><td>180</td><td>Houston</td><td style="color:#51cf66;">5.8%</td></tr>
-  <tr><td>20</td><td>Trevor</td><td>36</td><td>172</td><td>Michigan</td><td>0.8%</td></tr>
-  <tr class="you"><td>20</td><td>Seymour</td><td>36</td><td>180</td><td>Arizona</td><td>0.5%</td></tr>
+  <tr><td>1</td><td>Thomas9712w <span class="tag tag-leader">LEADER</span></td><td>45</td><td>187</td><td>Michigan</td><td style="color:#ffd43b;">10.4%</td></tr>
+  <tr><td>2</td><td>Thomas9712w #2</td><td>43</td><td>181</td><td>Arizona</td><td style="color:#ffd43b;">1.2%</td></tr>
+  <tr><td>3</td><td>Suge Knight</td><td>42</td><td>180</td><td>Arizona</td><td style="color:#ffd43b;">1.7%</td></tr>
+  <tr><td>4</td><td>jac #2</td><td>41</td><td>183</td><td>Arizona</td><td>1.3%</td></tr>
+  <tr><td>4</td><td>RamFan</td><td>41</td><td>183</td><td>Arizona</td><td>1.6%</td></tr>
+  <tr><td>4</td><td>Daniel</td><td>41</td><td>183</td><td>Arizona</td><td>9.5%</td></tr>
+  <tr><td>4</td><td>canadiens</td><td>41</td><td>179</td><td>Florida</td><td>3.8%</td></tr>
+  <tr class="you"><td>8</td><td>Seymour #2 <span class="tag tag-you">YOU</span></td><td>40</td><td>182</td><td>Michigan</td><td style="color:#00e5cc;font-weight:bold;">2.8%</td></tr>
+  <tr><td>8</td><td>B Crew</td><td>40</td><td>178</td><td>Florida</td><td>2.4%</td></tr>
+  <tr><td>8</td><td>Doaners_picks</td><td>40</td><td>178</td><td>Duke</td><td>3.4%</td></tr>
+  <tr><td>8</td><td>PCraig</td><td>40</td><td>178</td><td>Duke</td><td>5.9%</td></tr>
+  <tr><td>8</td><td>Lisa K</td><td>40</td><td>178</td><td>Arizona</td><td>1.1%</td></tr>
+  <tr><td>13</td><td>Canman1</td><td>39</td><td>181</td><td>Arizona</td><td>1.5%</td></tr>
+  <tr><td>13</td><td>BlairMac</td><td>39</td><td>181</td><td>Arizona</td><td>2.4%</td></tr>
+  <tr><td>13</td><td>Go Canada</td><td>39</td><td>177</td><td>Michigan</td><td>1.1%</td></tr>
+  <tr><td>13</td><td>Slamdunk2026 #2</td><td>39</td><td>177</td><td>Michigan</td><td>2.1%</td></tr>
+  <tr><td>13</td><td>Janer #2</td><td>39</td><td>169</td><td>UConn</td><td>0.7%</td></tr>
+  <tr><td>13</td><td>Slamdunk2026</td><td>39</td><td>153</td><td>Duke</td><td>1.6%</td></tr>
+  <tr><td>13</td><td>Scott Carrick</td><td>39</td><td>109</td><td>Vandy</td><td>4.8%</td></tr>
+  <tr><td>20</td><td>Billy O</td><td>38</td><td>180</td><td>Houston</td><td>8.1%</td></tr>
 </table>
-<p style="font-size:12px; color:#666; margin-top:10px;">Showing top entries + highest win probabilities. Win% estimated from Monte Carlo simulation (50K runs). Your "Seymour" entry is T-20th (0.5%).</p>
-<p style="font-size:12px; color:#888; margin-top:5px;">Thomas9712w surged to 1st after nailing both Nebraska and Arkansas (+4 pts). He shares your Michigan champion pick, making him your direct rival. Suge Knight (42 pts) got Arkansas right. 8 R2 games today — big chance to close the gap.</p>
+<p style="font-size:12px; color:#666; margin-top:10px;">Win% estimated via Monte Carlo simulation (10K runs). Seymour is 20th (1.2%).</p>
 </div>
 
-<!-- ==================== TODAY'S GAMES ==================== -->
-<h2>Today's Games &mdash; Root For</h2>
+<!-- GAMES -->
+<h2>Round 2 Games</h2>
 <div class="card">
+
   <div class="game-card">
     <div class="game-teams">
-      <strong>(1) Michigan vs (9) St. Louis</strong> &mdash; Midwest &mdash; <span style="color:#51cf66;">✅ FINAL: Michigan 95, St. Louis 72</span>
-      <div class="pick-compare">You: Michigan | Suge Knight: Michigan | Trevor: Michigan</div>
-      <div class="game-note">Michigan advances to Sweet 16! Everyone picked Michigan, so no separation. Next big Midwest game: R3 vs Texas Tech.</div>
+      <strong>(1) Duke vs (9) TCU</strong> &mdash; East &mdash; <span style="color:#51cf66;">FINAL: Duke wins</span>
+      <div class="pick-compare">You picked: Duke +2</div>
     </div>
-    <div class="game-impact"><span class="root-for">MICHIGAN</span></div>
+    <div class="game-impact"><span class="root-for">WON</span></div>
   </div>
 
   <div class="game-card">
     <div class="game-teams">
-      <strong>(6) Louisville vs (3) Michigan State</strong> &mdash; East &mdash; <span style="color:#51cf66;">✅ FINAL: Michigan State 77, Louisville 69</span>
-      <div class="pick-compare">You: <span class="pick-diff">Mich. St. ✓</span> | Suge Knight: Mich. St. ✓ | Trevor: <span class="pick-diff">Louisville ✗</span> | jac #2: Louisville ✗</div>
-      <div class="game-note">Michigan State advances to Sweet 16! +2 for you &amp; Suge Knight. Trevor &amp; jac #2 get nothing here.</div>
+      <strong>(5) St. Johns vs (4) Kansas</strong> &mdash; East &mdash; <span style="color:#ffd43b;">UPCOMING</span>
+      <div class="pick-compare">You picked: Kansas</div>
     </div>
-    <div class="game-impact"><span class="root-for">✅ WON</span></div>
+    <div class="game-impact"><span class="root-for">ROOT: KANSAS</span></div>
   </div>
 
   <div class="game-card">
     <div class="game-teams">
-      <strong>(1) Duke vs (9) TCU</strong> &mdash; East &mdash; <span style="color:#51cf66;">✅ FINAL: Duke 81, TCU 58</span>
-      <div class="pick-compare">Everyone picked Duke &mdash; no differentiation (+2 for all)</div>
-      <div class="game-note">Duke advances to Sweet 16. No separation this round, but later rounds matter: you need UConn to win East.</div>
+      <strong>(6) Louisville vs (3) Mich. St.</strong> &mdash; East &mdash; <span style="color:#51cf66;">FINAL: Mich. St. wins</span>
+      <div class="pick-compare">You picked: Mich. St. +2</div>
     </div>
-    <div class="game-impact"><span class="impact-neutral">NEUTRAL</span></div>
+    <div class="game-impact"><span class="root-for">WON</span></div>
   </div>
 
   <div class="game-card">
     <div class="game-teams">
-      <strong>(10) Texas A&M vs (2) Houston</strong> &mdash; South &mdash; <span style="color:#51cf66;">✅ FINAL: Houston 88, Texas A&amp;M 57</span>
-      <div class="pick-compare">You: <span class="pick-diff">Houston ✓</span> | Suge Knight: Houston ✓ | Trevor: <span class="pick-diff">St. Marys (DEAD)</span></div>
-      <div class="game-note">Houston dominates. +2 for you. Trevor gets 0 (his pick was already eliminated). Houston heads to S16.</div>
+      <strong>(7) UCLA vs (2) UConn</strong> &mdash; East &mdash; <span style="color:#ffd43b;">UPCOMING</span>
+      <div class="pick-compare">You picked: UConn</div>
     </div>
-    <div class="game-impact"><span class="root-for">✅ WON</span></div>
+    <div class="game-impact"><span class="root-for">ROOT: UCONN</span></div>
   </div>
 
   <div class="game-card">
     <div class="game-teams">
-      <strong>(11) Texas vs (3) Gonzaga</strong> &mdash; West &mdash; <span style="color:#ff6b6b;">❌ FINAL: Texas 74, Gonzaga 68</span>
-      <div class="pick-compare">You: <span class="pick-diff">Gonzaga ✗</span> | Suge Knight: <span class="pick-diff">Texas ✓</span> | Trevor: Gonzaga ✗ | jac #2: Gonzaga ✗</div>
-      <div class="game-note">OUCH. Suge Knight had this one right. +2 swing in his favor. Silver lining: your S16 path had Purdue over Gonzaga, so Gonzaga's exit doesn't break your later picks.</div>
+      <strong>(1) Florida vs (9) Iowa</strong> &mdash; South &mdash; <span style="color:#ffd43b;">UPCOMING</span>
+      <div class="pick-compare">You picked: Florida</div>
     </div>
-    <div class="game-impact"><span class="root-against">❌ LOST</span></div>
+    <div class="game-impact"><span class="root-for">ROOT: FLORIDA</span></div>
   </div>
 
   <div class="game-card">
     <div class="game-teams">
-      <strong>(11) VCU vs (3) Illinois</strong> &mdash; South &mdash; <span style="color:#51cf66;">✅ FINAL: Illinois 76, VCU 55</span>
-      <div class="pick-compare">Nearly everyone picked Illinois &mdash; no differentiation (+2 for all)</div>
-    </div>
-    <div class="game-impact"><span class="root-for">✅ WON</span></div>
-  </div>
-
-  <div class="game-card">
-    <div class="game-teams">
-      <strong>(5) Vanderbilt vs (4) Nebraska</strong> &mdash; South &mdash; <span style="color:#ff6b6b;">FINAL: Nebraska 74, Vanderbilt 72</span>
-      <div class="pick-compare">You: <span class="pick-diff">Vandy X</span> | Suge Knight: Vandy X | Trevor: <span class="pick-diff">Nebraska +2</span> | jac #2: Nebraska +2</div>
-      <div class="game-note">Heartbreaker. Nebraska wins by 2. Trevor and jac #2 gain +2 while you and Suge Knight get 0. Your S16 South pick (Florida over Vandy) is now broken.</div>
+      <strong>(5) Vandy vs (4) Nebraska</strong> &mdash; South &mdash; <span style="color:#ff6b6b;">FINAL: Nebraska wins</span>
+      <div class="pick-compare">You picked: Vandy X</div>
     </div>
     <div class="game-impact"><span class="root-against">LOST</span></div>
   </div>
 
   <div class="game-card">
     <div class="game-teams">
-      <strong>(12) High Point vs (4) Arkansas</strong> &mdash; West &mdash; <span style="color:#51cf66;">FINAL: Arkansas 94, High Point 88</span>
-      <div class="pick-compare">You: <span class="pick-diff">Arkansas +2</span> | Suge Knight: Arkansas +2 | Trevor: <span class="pick-diff">High Point X</span></div>
-      <div class="game-note">Arkansas survives! +2 for you. Trevor gets 0. Arkansas advances to S16 where you have them (before Arizona beats them).</div>
+      <strong>(11) VCU vs (3) Illinois</strong> &mdash; South &mdash; <span style="color:#51cf66;">FINAL: Illinois wins</span>
+      <div class="pick-compare">You picked: Illinois +2</div>
     </div>
     <div class="game-impact"><span class="root-for">WON</span></div>
   </div>
+
+  <div class="game-card">
+    <div class="game-teams">
+      <strong>(10) Tex. A&M vs (2) Houston</strong> &mdash; South &mdash; <span style="color:#51cf66;">FINAL: Houston wins</span>
+      <div class="pick-compare">You picked: Houston +2</div>
+    </div>
+    <div class="game-impact"><span class="root-for">WON</span></div>
+  </div>
+
+  <div class="game-card">
+    <div class="game-teams">
+      <strong>(1) Arizona vs (9) Utah St.</strong> &mdash; West &mdash; <span style="color:#ffd43b;">UPCOMING</span>
+      <div class="pick-compare">You picked: Arizona</div>
+    </div>
+    <div class="game-impact"><span class="root-for">ROOT: ARIZONA</span></div>
+  </div>
+
+  <div class="game-card">
+    <div class="game-teams">
+      <strong>(12) High Point vs (4) Arkansas</strong> &mdash; West &mdash; <span style="color:#51cf66;">FINAL: Arkansas wins</span>
+      <div class="pick-compare">You picked: Arkansas +2</div>
+    </div>
+    <div class="game-impact"><span class="root-for">WON</span></div>
+  </div>
+
+  <div class="game-card">
+    <div class="game-teams">
+      <strong>(11) Texas vs (3) Gonzaga</strong> &mdash; West &mdash; <span style="color:#ff6b6b;">FINAL: Texas wins</span>
+      <div class="pick-compare">You picked: Gonzaga X</div>
+    </div>
+    <div class="game-impact"><span class="root-against">LOST</span></div>
+  </div>
+
+  <div class="game-card">
+    <div class="game-teams">
+      <strong>(7) Miami vs (2) Purdue</strong> &mdash; West &mdash; <span style="color:#51cf66;">FINAL: Purdue wins</span>
+      <div class="pick-compare">You picked: Purdue +2</div>
+    </div>
+    <div class="game-impact"><span class="root-for">WON</span></div>
+  </div>
+
+  <div class="game-card">
+    <div class="game-teams">
+      <strong>(1) Michigan vs (9) St. Louis</strong> &mdash; Midwest &mdash; <span style="color:#51cf66;">FINAL: Michigan wins</span>
+      <div class="pick-compare">You picked: Michigan +2</div>
+    </div>
+    <div class="game-impact"><span class="root-for">WON</span></div>
+  </div>
+
+  <div class="game-card">
+    <div class="game-teams">
+      <strong>(5) Texas Tech vs (4) Alabama</strong> &mdash; Midwest &mdash; <span style="color:#ffd43b;">UPCOMING</span>
+      <div class="pick-compare">You picked: Texas Tech</div>
+    </div>
+    <div class="game-impact"><span class="root-for">ROOT: TEXAS TECH</span></div>
+  </div>
+
+  <div class="game-card">
+    <div class="game-teams">
+      <strong>(6) Tennessee vs (3) Virginia</strong> &mdash; Midwest &mdash; <span style="color:#ffd43b;">UPCOMING</span>
+      <div class="pick-compare">You picked: Virginia</div>
+    </div>
+    <div class="game-impact"><span class="root-for">ROOT: VIRGINIA</span></div>
+  </div>
+
+  <div class="game-card">
+    <div class="game-teams">
+      <strong>(7) Kentucky vs (2) Iowa St.</strong> &mdash; Midwest &mdash; <span style="color:#ffd43b;">UPCOMING</span>
+      <div class="pick-compare">You picked: Iowa St.</div>
+    </div>
+    <div class="game-impact"><span class="root-for">ROOT: IOWA ST.</span></div>
+  </div>
 </div>
 
-<!-- ==================== TODAY'S REMAINING GAMES ==================== -->
-<h2>Today's Games (March 22) &mdash; Root For</h2>
-<div class="card">
-  <div class="game-card">
-    <div class="game-teams">
-      <strong>(5) St. Johns vs (4) Kansas</strong> &mdash; East
-      <div class="pick-compare">You: Kansas | Suge Knight: <span class="pick-diff">St. Johns</span> | Trevor: Kansas | jac #2: St. Johns</div>
-    </div>
-    <div class="game-impact"><span class="root-for">KANSAS</span></div>
-  </div>
-  <div class="game-card">
-    <div class="game-teams">
-      <strong>(7) UCLA vs (2) UConn</strong> &mdash; East
-      <div class="pick-compare">You: UConn (need for East run) | Suge Knight: <span class="pick-diff">UCLA</span> | Trevor: UConn</div>
-      <div class="game-note">Critical for your East bracket. UConn winning East is your differentiator vs Duke-heavy entries.</div>
-    </div>
-    <div class="game-impact"><span class="root-for">UCONN</span></div>
-  </div>
-  <div class="game-card">
-    <div class="game-teams">
-      <strong>(1) Florida vs (9) Iowa</strong> &mdash; South
-      <div class="pick-compare">Everyone has Florida</div>
-    </div>
-    <div class="game-impact"><span class="impact-neutral">NEUTRAL</span></div>
-  </div>
-  <div class="game-card">
-    <div class="game-teams">
-      <strong>(1) Arizona vs (9) Utah St.</strong> &mdash; West
-      <div class="pick-compare">Everyone has Arizona (also good for your "Seymour" entry)</div>
-    </div>
-    <div class="game-impact"><span class="impact-neutral">NEUTRAL</span></div>
-  </div>
-  <div class="game-card">
-    <div class="game-teams">
-      <strong>(7) Miami vs (2) Purdue</strong> &mdash; West
-      <div class="pick-compare">You: Purdue | Suge Knight: <span class="pick-diff">Miami</span> | Trevor: Purdue</div>
-    </div>
-    <div class="game-impact"><span class="root-for">PURDUE</span></div>
-  </div>
-  <div class="game-card">
-    <div class="game-teams">
-      <strong>(5) Texas Tech vs (4) Alabama</strong> &mdash; Midwest
-      <div class="pick-compare">You: <span class="pick-diff">Texas Tech</span> | Trevor: <span class="pick-diff">Alabama</span> | jac #2: Alabama</div>
-    </div>
-    <div class="game-impact"><span class="root-for">TEXAS TECH</span></div>
-  </div>
-  <div class="game-card">
-    <div class="game-teams">
-      <strong>(6) Tennessee vs (3) Virginia</strong> &mdash; Midwest
-      <div class="pick-compare">You: Virginia | Most top entries: Virginia</div>
-    </div>
-    <div class="game-impact"><span class="root-for">VIRGINIA</span></div>
-  </div>
-  <div class="game-card">
-    <div class="game-teams">
-      <strong>(7) Kentucky vs (2) Iowa St.</strong> &mdash; Midwest
-      <div class="pick-compare">You: Iowa St. | Suge Knight: Iowa St. | Trevor: <span class="pick-diff">Kentucky</span></div>
-    </div>
-    <div class="game-impact"><span class="root-for">IOWA ST.</span></div>
-  </div>
-</div>
-
-<!-- ==================== YOUR BRACKET PATH ==================== -->
+<!-- BRACKET PATH -->
 <h2>Your Full Bracket Path (Seymour #2)</h2>
 <div class="grid-2">
   <div class="card">
     <h3 style="margin-top:0;">East: UConn to Win</h3>
-    <p style="font-size:13px;">R2: Duke, Kansas, Mich. St., UConn<br>
-    S16: Duke over Kansas, UConn over Mich. St.<br>
-    E8: <strong>UConn over Duke</strong></p>
-    <p style="font-size:11px;color:#888;">Your differentiator &mdash; most others have Duke winning East.</p>
+    <p style="font-size:13px;">S16: Duke over UConn<br>
+    E8: <strong>UConn</strong></p>
   </div>
   <div class="card">
     <h3 style="margin-top:0;">South: Florida to Win</h3>
-    <p style="font-size:13px;">R2: Florida, <s>Vandy</s> (Nebraska won), Illinois, Houston<br>
-    S16: Florida over <s>Vandy</s> &mdash; BROKEN (Nebraska advanced instead)<br>
-    E8: <strong>Florida over Houston</strong> (still possible if Florida beats Nebraska)</p>
-    <p style="font-size:11px;color:#ff6b6b;">Vandy loss breaks your S16 pick here. You lose the 4-pt S16 bonus but Florida can still win the region.</p>
+    <p style="font-size:13px;">S16: Florida over Houston<br>
+    E8: <strong>Florida</strong></p>
   </div>
   <div class="card">
     <h3 style="margin-top:0;">West: Arizona to Win</h3>
-    <p style="font-size:13px;">R2: Arizona, Arkansas, Gonzaga, Purdue<br>
-    S16: Arizona over Arkansas, Purdue over Gonzaga<br>
-    E8: <strong>Arizona over Purdue</strong></p>
+    <p style="font-size:13px;">S16: Arizona over Purdue<br>
+    E8: <strong>Arizona</strong></p>
   </div>
   <div class="card">
     <h3 style="margin-top:0;">Midwest: Michigan to Win</h3>
-    <p style="font-size:13px;">R2: Michigan, Texas Tech, Virginia, Iowa St.<br>
-    S16: Michigan over Texas Tech, Iowa St. over Virginia<br>
-    E8: <strong>Michigan over Iowa St.</strong></p>
-    <p style="font-size:11px;color:#ffd43b;">Your lifeblood region. Suge Knight has Iowa St. winning here instead.</p>
+    <p style="font-size:13px;">S16: Michigan over Iowa St.<br>
+    E8: <strong>Michigan</strong></p>
   </div>
 </div>
-<div class="card card-highlight">
+<div class="card" style="border-left: 4px solid #00e5cc;">
   <h3 style="margin-top:0;">Final Four &amp; Championship</h3>
-  <p><strong>Semi 1:</strong> Florida over UConn &bull; <strong>Semi 2:</strong> Michigan over Arizona &bull; <strong>Final:</strong> Michigan over Florida = <span style="color:#00e5cc;">CHAMPION</span></p>
+  <p><strong>Semi 1:</strong> Florida &bull; <strong>Semi 2:</strong> Michigan &bull; <strong>Champion:</strong> <span style="color:#00e5cc;">Michigan</span></p>
 </div>
 
-<!-- ==================== BRACKET COMPARISON ==================== -->
-<h2>Bracket Comparison &mdash; All 40 Entries</h2>
-<div class="card" style="padding:15px;">
-  <div id="round-btns" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px;">
-    <button class="rnd-btn active" onclick="showRound('r2')">Round 2</button>
-    <button class="rnd-btn" onclick="showRound('s16')">Sweet 16</button>
-    <button class="rnd-btn" onclick="showRound('e8')">Elite 8</button>
-    <button class="rnd-btn" onclick="showRound('ff')">Final Four</button>
-    <button class="rnd-btn" onclick="showRound('champ')">Championship</button>
-  </div>
-  <p style="font-size:12px;color:#888;margin-bottom:8px;">Sorted by standings (leaders left). Scroll right to see all 40 entries. Win% shown per entry (Monte Carlo).</p>
-  <p style="font-size:12px;margin-bottom:12px;">
-    <span style="color:#00e5cc;">&#9632; Your pick / matches yours</span> &nbsp;
-    <span style="color:#51cf66;">&#9612; Team alive</span> &nbsp;
-    <span style="color:#ff6b6b;text-decoration:line-through;">Eliminated ✗</span> &nbsp;
-    <span style="color:#999;">Differs from you</span>
-  </p>
-  <div id="bracket-grid" style="overflow-x:auto;-webkit-overflow-scrolling:touch;"></div>
-</div>
-
-<style>
-  .rnd-btn{background:#1e2a36;color:#aaa;border:1px solid #2a3a4a;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;}
-  .rnd-btn:hover{background:#253545;color:#e0e0e0;}
-  .rnd-btn.active{background:#00e5cc;color:#0a0e14;border-color:#00e5cc;}
-  .bc-table{border-collapse:separate;border-spacing:0;font-size:12px;white-space:nowrap;}
-  .bc-table th{position:sticky;left:0;z-index:2;background:#141b24;padding:6px 10px;text-align:left;border-bottom:1px solid #1e2a36;font-weight:600;color:#7ec8e3;min-width:90px;}
-  .bc-table td{padding:6px 10px;text-align:center;border-bottom:1px solid #1a2230;min-width:110px;font-size:12px;}
-  .bc-table thead td{background:#0d1520;font-weight:700;font-size:11px;color:#e0e0e0;border-bottom:2px solid #1e3a5f;position:sticky;top:0;z-index:1;}
-  .bc-table thead td.you-col{background:rgba(0,229,204,0.15);color:#00e5cc;}
-  .bc-table tbody td.you-col{background:rgba(0,229,204,0.05);}
-  .bc-pick{display:inline-block;padding:3px 8px;border-radius:5px;font-weight:600;}
-  .bc-pick.match{background:rgba(0,229,204,0.12);color:#00e5cc;}
-  .bc-pick.diff{background:rgba(255,215,59,0.08);color:#999;}
-  .bc-pick.dead{background:rgba(255,107,107,0.1);color:#ff6b6b;text-decoration:line-through;opacity:0.5;}
-  .bc-pick.alive{border-left:2px solid #51cf66;}
-  .bc-prob{font-size:10px;color:#888;font-weight:normal;}
-  .bc-region{color:#00e5cc;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:1px;background:#0d1520 !important;border-bottom:2px solid #1e3a5f !important;}
-</style>
-
-<script>
-// ===== BRACKET COMPARISON DATA =====
-const TM={2:"Akron",3:"Alabama",10:"Arizona",13:"Arkansas",34:"BYU",41:"Central FL",47:"Clemson",55:"UConn",70:"Duke",83:"Florida",90:"Furman",95:"Georgia",99:"Gonzaga",104:"Hawaii",105:"High Point",106:"Hofstra",108:"Houston",109:"Howard",110:"Idaho",112:"Illinois",119:"Iowa",120:"Iowa St.",125:"Kansas",128:"Kentucky",140:"Louisville",152:"McNeese",157:"Miami",158:"Miami OH",159:"Michigan",160:"Mich. St.",166:"Missouri",180:"Nebraska",189:"UNC",194:"N. Iowa",200:"Ohio St.",208:"UPenn",213:"Pr. View",216:"Purdue",234:"Santa Clara",238:"Siena",244:"S. Florida",252:"St. Johns",254:"St. Louis",255:"St. Marys",262:"TCU",265:"Tennessee",266:"Tenn. St.",269:"Texas",270:"Tex. A&M",274:"Texas Tech",278:"Troy",287:"UCLA",293:"Utah St.",295:"VCU",297:"Vandy",299:"Villanova",300:"Virginia",318:"Wisconsin",320:"Wright St",328:"N.Dak.St",364:"Kenn St",369:"CA Baptist",373:"Long Island",374:"Queens"};
-
-// All entries [name, place, pts, picks_array(1-63)]
-const ALL=[
-["Suge Knight",2,42,[70,262,252,125,244,160,287,55,83,119,297,180,295,112,270,108,10,293,318,13,269,364,157,216,159,254,274,3,265,300,234,120,70,252,160,287,83,297,112,108,10,13,269,157,159,274,300,120,252,160,83,108,10,157,274,120,252,108,10,120,108,10,10]],
-["Trevor",20,36,[70,200,252,125,140,160,287,55,83,119,297,180,295,112,255,108,10,293,105,104,269,99,157,216,159,95,274,3,265,300,128,120,70,125,140,55,83,180,112,255,10,105,99,216,159,3,300,128,70,55,83,255,10,99,159,300,70,83,10,159,70,159,159]],
-["jac #2",4,39,[70,262,252,125,140,160,287,55,83,47,297,180,189,112,270,108,10,293,318,13,34,99,157,216,159,95,274,3,265,300,128,120,70,252,140,55,83,180,112,108,10,13,99,216,159,3,300,120,70,55,83,108,10,216,159,300,70,83,10,159,70,10,10]],
-["RamFan",4,39,[70,262,252,125,140,160,287,55,83,119,297,180,295,112,270,108,10,293,318,13,34,99,166,216,159,95,274,3,158,300,128,120,70,252,160,55,83,297,112,108,10,13,99,216,159,274,300,120,70,55,83,112,10,216,159,120,70,83,10,159,83,10,10]],
-["Thomas9712w",1,43,[70,200,252,125,244,160,287,55,83,119,297,180,295,112,270,108,10,293,318,13,269,364,157,216,159,95,274,3,265,300,128,120,70,252,160,55,83,180,112,108,10,13,269,216,159,3,265,120,70,55,180,108,10,216,159,120,70,108,10,159,70,159,159]],
-["Thomas9712w #2",3,41,[70,200,252,125,244,160,287,55,83,119,297,180,295,112,255,108,10,293,318,13,269,99,157,216,159,95,274,3,265,300,128,120,70,252,160,55,83,297,112,108,10,13,269,216,159,3,265,120,70,55,297,108,10,216,159,120,70,108,10,159,70,10,10]],
-["Scott Carrick",13,37,[70,262,252,125,140,160,41,55,83,119,297,180,295,112,270,108,10,293,318,13,34,99,166,216,159,254,274,3,265,300,234,120,70,252,140,55,83,297,112,108,10,13,34,216,159,3,265,120,252,140,297,108,10,216,159,120,140,297,216,159,297,216,297]],
-["Janer #2",13,37,[70,262,252,125,140,160,41,55,83,119,297,180,189,112,270,108,10,293,318,13,34,99,166,216,159,254,274,3,265,300,128,120,70,125,160,55,83,297,189,108,10,13,99,216,159,3,265,120,125,55,83,189,10,216,3,265,55,189,10,265,55,10,55]],
-["B Crew",8,38,[70,200,252,125,140,160,287,55,83,119,297,180,189,112,255,108,10,293,318,13,34,99,157,216,159,95,274,3,265,300,128,120,70,252,160,55,83,297,112,108,10,13,99,216,159,3,300,120,70,160,83,112,10,99,159,300,70,83,10,159,83,10,83]],
-["Doaners_picks",8,38,[70,262,252,125,244,160,287,55,83,119,297,180,295,112,270,108,10,299,318,13,34,99,157,216,159,95,274,3,265,300,234,120,70,252,160,55,83,297,112,108,10,13,99,216,159,3,300,120,70,55,83,112,10,99,159,120,70,83,10,120,70,10,70]],
-["Seymour #2",8,38,[70,262,194,125,140,160,287,55,83,119,297,180,295,112,255,108,10,299,105,13,34,99,157,216,159,95,274,106,265,300,128,120,70,125,160,55,83,297,112,108,10,13,99,216,159,274,300,120,70,55,83,108,10,216,159,120,55,83,10,159,83,159,159]],
-["Billy O",20,36,[70,200,252,125,244,160,287,55,83,119,297,180,295,112,255,108,10,293,318,13,34,99,157,216,159,254,2,3,265,300,128,120,70,252,160,55,83,297,112,108,10,318,99,216,159,3,300,120,70,55,83,108,10,216,159,120,70,108,10,120,108,10,108]],
-["C6Z06",20,36,[70,200,252,125,140,160,287,55,83,119,297,180,189,112,255,108,10,293,318,13,34,99,157,216,159,95,274,3,265,300,128,120,70,125,160,287,83,297,112,108,10,318,99,216,159,3,300,120,70,160,83,108,10,216,159,120,70,83,10,159,83,159,83]],
-["PCraig",8,38,[70,200,252,125,140,160,287,55,83,119,297,180,189,112,270,108,10,299,318,13,34,99,157,216,159,95,274,3,265,300,128,120,70,252,160,55,83,180,112,108,10,318,99,216,159,3,300,128,70,160,83,112,10,99,159,300,70,112,10,300,70,300,70]],
-["B Crew #2",20,36,[70,262,252,125,140,160,287,55,83,119,152,180,189,112,270,108,10,293,318,104,269,99,157,216,159,254,274,3,158,300,234,120,70,252,160,287,83,180,189,270,10,104,269,157,159,3,300,120,252,160,83,270,10,157,159,120,252,83,10,159,252,10,10]],
-["Lisa K",8,38,[70,200,252,125,244,160,287,55,83,119,297,180,295,112,255,108,10,293,318,13,34,99,157,216,159,254,274,3,265,300,234,120,70,125,160,55,83,297,112,108,10,13,34,216,159,3,300,120,70,55,83,108,10,34,159,120,55,108,10,159,108,10,10]],
-["BlairMac #2",20,36,[70,200,252,125,140,160,41,55,83,119,297,180,189,112,255,108,10,293,318,13,34,99,157,216,159,254,274,3,265,300,128,120,70,252,160,55,83,180,112,255,10,318,99,216,159,274,300,120,252,55,83,255,10,216,274,120,252,83,10,120,83,120,83]],
-["canadiens",4,39,[70,200,252,125,140,160,287,55,83,119,297,180,189,112,270,108,10,299,318,13,34,99,157,216,159,95,274,3,265,300,234,120,70,252,160,287,83,180,112,108,10,13,99,216,159,3,300,120,252,160,83,112,10,99,3,300,252,83,10,3,83,3,83]],
-["Canman1",13,37,[70,200,252,125,244,160,287,55,83,47,297,180,189,112,255,108,10,299,318,13,269,99,157,216,159,254,274,3,265,300,128,120,70,252,160,55,83,297,112,108,10,13,99,216,159,3,300,120,70,160,83,112,10,216,159,300,70,83,10,300,83,10,10]],
-["Daniel",4,39,[70,262,252,125,244,160,41,55,83,119,297,180,189,112,255,108,10,293,318,13,269,99,166,216,159,95,274,3,265,300,128,120,70,252,160,55,83,297,112,108,10,13,269,216,159,3,265,120,70,160,83,112,10,216,159,120,160,112,10,120,160,10,10]],
-["Go Canada",13,37,[70,200,252,125,140,160,287,55,83,119,297,180,189,112,255,108,10,299,318,13,34,99,157,216,159,254,2,3,265,300,128,120,70,252,160,55,83,297,112,108,10,13,99,216,159,3,300,120,70,160,83,112,10,99,159,120,70,83,10,159,70,159,159]],
-["BlairMac",13,37,[70,200,252,125,140,160,287,55,83,119,297,180,189,112,255,108,10,299,318,13,34,99,157,216,159,95,274,3,265,300,128,120,70,252,160,55,83,297,112,108,10,13,34,216,159,274,300,120,252,55,83,112,10,216,159,120,55,112,10,159,55,10,10]],
-["joeyjohnson",28,35,[70,200,252,125,140,160,287,55,83,47,152,180,295,112,255,108,373,293,105,13,34,99,157,216,159,254,274,3,265,300,234,120,70,125,140,55,83,180,112,108,293,105,34,216,159,3,300,120,125,55,83,112,293,216,159,300,55,83,216,300,55,300,55]],
-["Slamdunk2026 #2",13,37,[70,200,252,125,244,160,287,55,83,119,152,180,295,112,270,108,10,293,318,13,34,99,157,216,159,95,2,3,265,300,128,120,70,125,160,55,83,180,112,108,10,318,99,216,159,3,265,120,125,160,83,108,10,99,159,265,160,83,10,159,83,159,159]],
-["Josh Carrick",35,31,[70,200,194,125,140,160,287,55,83,119,297,180,189,112,270,108,10,293,318,13,269,99,166,216,159,95,274,3,265,300,234,120,70,125,160,55,83,180,189,108,10,318,99,216,159,3,265,120,70,160,83,189,318,99,159,120,70,83,99,120,70,120,120]],
-["Go Canada #2",20,36,[70,200,252,125,140,160,287,55,83,47,297,180,189,112,270,108,10,299,318,13,34,99,166,216,159,95,274,3,265,300,128,120,70,252,160,55,83,297,112,108,10,13,99,216,159,3,300,120,70,55,83,108,10,216,159,120,70,83,10,159,70,159,70]],
-["Seagulljon",20,36,[70,200,252,125,140,160,287,55,83,47,297,180,189,112,255,108,10,299,318,13,34,99,157,216,159,95,274,3,265,300,128,120,70,125,140,55,83,180,112,108,10,13,99,216,159,3,300,120,70,55,83,108,10,216,3,120,55,108,10,120,55,10,55]],
-["Paul McGuigan",20,36,[70,200,252,125,140,160,287,55,83,47,297,180,189,112,255,108,10,299,318,13,34,99,157,216,159,95,274,3,265,300,128,120,70,252,160,55,83,180,112,108,10,318,99,216,159,3,300,120,70,55,83,108,10,216,159,120,70,83,10,159,70,159,70]],
-["Seymour",20,36,[70,200,252,125,244,160,287,55,83,119,297,180,295,112,270,108,10,293,318,13,34,99,166,216,159,95,2,3,265,300,234,120,70,252,160,55,83,297,112,108,10,13,34,216,159,3,300,120,70,55,83,108,10,216,159,120,70,108,10,159,108,10,10]],
-["RJH",31,34,[70,262,252,125,140,160,287,55,83,119,152,180,189,112,255,108,10,299,318,13,269,99,157,216,159,95,274,106,158,300,128,120,70,125,140,287,83,180,189,108,10,13,99,157,159,274,300,120,70,287,83,189,10,99,159,120,70,83,99,159,70,159,159]],
-["Slamdunk2026",13,37,[70,200,252,125,140,160,41,55,83,47,152,180,295,112,270,108,10,299,318,13,34,99,166,216,159,95,274,3,265,300,128,120,70,125,160,55,83,180,112,108,10,13,99,216,159,3,300,120,70,55,180,108,10,99,159,300,70,108,99,159,70,99,70]],
-["Kim Burns #2",28,35,[70,200,194,125,140,160,287,55,83,47,297,180,189,112,255,108,10,299,318,13,34,99,157,216,159,95,274,3,265,300,128,120,70,125,160,55,83,180,112,108,10,318,99,157,159,274,300,128,70,160,83,112,10,157,274,300,160,112,157,274,160,157,157]],
-["SimonT",33,33,[70,200,252,125,244,160,287,55,83,47,297,180,189,112,270,108,10,299,318,13,34,99,157,216,159,95,274,3,265,300,234,120,70,252,160,55,83,297,112,108,10,318,99,216,159,274,300,120,70,55,83,112,10,99,159,300,70,112,10,159,70,159,70]],
-["jac",35,31,[70,200,252,125,244,160,287,55,83,47,297,180,189,112,255,108,10,299,318,13,34,99,157,216,159,95,274,3,265,300,128,120,70,252,160,55,83,297,189,108,10,318,99,216,159,3,265,128,70,160,83,108,10,99,159,128,70,83,10,159,70,159,70]],
-["TrevorYC",28,35,[70,262,252,125,244,160,287,55,83,47,152,180,189,112,270,108,10,299,318,13,269,99,157,216,159,254,2,3,158,300,234,120,70,252,160,55,83,180,189,108,10,13,99,216,159,3,300,234,252,55,83,189,13,216,3,300,55,83,13,300,55,13,55]],
-["AL",33,33,[70,200,194,125,244,160,287,55,83,47,297,180,295,112,270,108,10,299,318,13,34,99,166,216,159,95,274,3,265,300,128,120,70,125,160,287,83,297,112,108,299,318,34,216,159,3,265,128,125,287,83,108,299,216,3,265,125,108,216,265,108,265,265]],
-["steviesizzle86",31,34,[70,200,252,369,244,160,287,55,83,47,297,278,295,112,270,108,10,293,318,13,34,99,166,216,159,254,274,3,158,320,128,120,70,252,160,55,83,297,112,108,10,13,99,216,159,3,158,120,70,55,83,108,10,216,159,120,70,83,10,159,83,10,10]],
-["Scott Carrick2",38,28,[238,200,252,369,140,160,41,55,83,47,297,180,295,208,270,108,10,299,105,104,269,99,166,216,159,254,274,3,265,300,234,120,200,369,160,55,47,297,208,108,299,104,99,216,159,274,265,234,369,160,297,108,299,99,159,265,369,108,299,265,369,299,369]],
-["Jake Carrick",35,31,[70,262,194,125,244,160,41,55,83,119,297,180,189,112,270,108,10,299,318,13,34,99,166,216,159,95,2,106,265,300,128,120,70,125,160,55,119,297,112,270,299,13,34,216,159,2,265,128,125,55,119,112,13,34,159,128,125,119,13,159,119,159,13]],
-["Janer",39,27,[70,200,252,125,244,160,41,55,83,47,297,180,189,112,270,108,10,299,318,13,34,99,166,216,159,95,274,3,265,300,128,120,70,252,160,55,83,297,189,108,10,318,99,216,159,3,265,128,70,55,83,108,10,99,159,128,70,108,10,128,70,159,70]]
-];
-
-// Game structure: round -> [{gameIdx(0-based), region, matchup}]
-const ROUNDS = {
-  r2: {label:"Round 2", games:[
-    {i:32,r:"EAST",m:"Duke vs TCU"},{i:33,r:"EAST",m:"StJ/NI vs Kan"},{i:34,r:"EAST",m:"Lou vs MSU"},{i:35,r:"EAST",m:"UCLA vs UConn"},
-    {i:36,r:"SOUTH",m:"Fla vs Iowa"},{i:37,r:"SOUTH",m:"Van vs Neb"},{i:38,r:"SOUTH",m:"VCU vs Ill"},{i:39,r:"SOUTH",m:"TAM vs Hou"},
-    {i:40,r:"WEST",m:"Ariz vs USU"},{i:41,r:"WEST",m:"HP vs Ark"},{i:42,r:"WEST",m:"Tex vs Gonz"},{i:43,r:"WEST",m:"Mia vs Pur"},
-    {i:44,r:"MIDWEST",m:"Mich vs StL"},{i:45,r:"MIDWEST",m:"TTU vs Bama"},{i:46,r:"MIDWEST",m:"Tenn vs UVA"},{i:47,r:"MIDWEST",m:"UK vs ISU"}
-  ]},
-  s16: {label:"Sweet 16", games:[
-    {i:48,r:"EAST",m:"E1 vs E2"},{i:49,r:"EAST",m:"E3 vs E4"},
-    {i:50,r:"SOUTH",m:"S1 vs S2"},{i:51,r:"SOUTH",m:"S3 vs S4"},
-    {i:52,r:"WEST",m:"W1 vs W2"},{i:53,r:"WEST",m:"W3 vs W4"},
-    {i:54,r:"MIDWEST",m:"MW1 vs MW2"},{i:55,r:"MIDWEST",m:"MW3 vs MW4"}
-  ]},
-  e8: {label:"Elite 8", games:[
-    {i:56,r:"EAST",m:"East Final"},{i:57,r:"SOUTH",m:"South Final"},{i:58,r:"WEST",m:"West Final"},{i:59,r:"MIDWEST",m:"MW Final"}
-  ]},
-  ff: {label:"Final Four", games:[
-    {i:60,r:"FINAL",m:"Semi 1 (E vs S)"},{i:61,r:"FINAL",m:"Semi 2 (W vs MW)"}
-  ]},
-  champ: {label:"Championship", games:[
-    {i:62,r:"FINAL",m:"Championship"}
-  ]}
-};
-
-// Teams still alive in the tournament (through Round 2 results so far)
-const ALIVE = new Set([70,252,125,160,287,55,83,119,180,112,108,10,293,13,269,157,216,159,274,3,265,300,128,120]);
-
-// Win probabilities for all entries
-const ENTRY_PROBS = {"Suge Knight":4.5,"Trevor":0.8,"jac #2":2.0,"RamFan":2.0,"Thomas9712w":6.2,"Thomas9712w #2":1.8,"Scott Carrick":3.5,"Janer #2":0.7,"B Crew":3.2,"Doaners_picks":3.5,"Seymour #2":3.0,"Billy O":5.8,"C6Z06":2.5,"PCraig":3.8,"B Crew #2":0.8,"Lisa K":0.9,"BlairMac #2":2.5,"canadiens":3.5,"Canman1":1.4,"Daniel":4.2,"Go Canada":1.3,"BlairMac":1.8,"joeyjohnson":3.0,"Slamdunk2026 #2":1.8,"Josh Carrick":4.5,"Go Canada #2":0.9,"Seagulljon":3.2,"Paul McGuigan":0.4,"Seymour":0.5,"RJH":0.7,"Slamdunk2026":5.8,"Kim Burns #2":1.6,"SimonT":1.1,"jac":0.2,"TrevorYC":2.2,"AL":1.1,"steviesizzle86":0.2,"Scott Carrick2":0.0,"Jake Carrick":1.1,"Janer":0.2};
-
-// Seymour #2 is index 10 in ALL array, Seymour is index 29
-const YOU_INDICES = [10, 29];
-const YOU_NAMES = ["Seymour #2", "Seymour"];
-
-function showRound(roundKey) {
-  document.querySelectorAll('.rnd-btn').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
-  const round = ROUNDS[roundKey];
-  const games = round.games;
-
-  // Group games by region
-  const regions = [];
-  let currentRegion = null;
-  games.forEach(g => {
-    if (g.r !== currentRegion) {
-      regions.push({name: g.r, games: []});
-      currentRegion = g.r;
-    }
-    regions[regions.length-1].games.push(g);
-  });
-
-  let html = '<table class="bc-table"><thead>';
-  // Header row with entry names + probabilities
-  html += '<tr><td style="position:sticky;left:0;z-index:3;background:#0d1520;min-width:90px;">' + round.label + '</td>';
-  ALL.forEach((e, idx) => {
-    const isYou = YOU_NAMES.includes(e[0]);
-    const prob = ENTRY_PROBS[e[0]] || 0;
-    const probColor = prob >= 5 ? '#51cf66' : prob >= 3 ? '#ffd43b' : '#888';
-    html += '<td class="' + (isYou ? 'you-col' : '') + '">' + e[0] + '<br><span style="font-size:10px;color:#888;">#' + e[1] + ' · ' + e[2] + 'pts</span><br><span class="bc-prob" style="color:' + probColor + ';">' + prob + '% win</span></td>';
-  });
-  html += '</tr></thead><tbody>';
-
-  // For each region and game
-  regions.forEach(region => {
-    html += '<tr><th class="bc-region" colspan="1">' + region.name + '</th>';
-    ALL.forEach(() => html += '<td class="bc-region"></td>');
-    html += '</tr>';
-
-    region.games.forEach(game => {
-      html += '<tr><th style="font-size:11px;color:#888;font-weight:normal;">' + game.m + '</th>';
-      const seymourPick = ALL[10][3][game.i]; // Seymour #2's pick
-      ALL.forEach((entry, idx) => {
-        const pick = entry[3][game.i];
-        const teamName = TM[pick] || pick;
-        const isYou = YOU_NAMES.includes(entry[0]);
-        const matchesYou = pick === seymourPick;
-        const isAlive = ALIVE.has(pick);
-        const isDead = !isAlive;
-        let cls = isYou ? 'match' : matchesYou ? 'match' : 'diff';
-        if (isDead) cls = 'dead';
-        else if (isAlive && !isYou) cls += ' alive';
-        html += '<td class="' + (isYou ? 'you-col' : '') + '"><span class="bc-pick ' + cls + '">' + teamName + (isDead ? ' ✗' : '') + '</span></td>';
-      });
-      html += '</tr>';
-    });
-  });
-
-  html += '</tbody></table>';
-  document.getElementById('bracket-grid').innerHTML = html;
-}
-
-// Initialize with Round 2
-document.addEventListener('DOMContentLoaded', () => showRound('r2'));
-</script>
-
-<!-- ==================== SCENARIOS ==================== -->
-<h2>Win Probability by Scenario</h2>
-<div class="grid-2">
-  <div class="card card-good">
-    <h3 style="margin-top:0; color:#51cf66;">If Michigan Wins It All</h3>
-    <p style="font-size:42px; font-weight:800; color:#51cf66;">~30-40%</p>
-    <p style="font-size:13px;">You'd collect 60 pts from Michigan's remaining run (S16 through Championship). Main rival Trevor has dead South picks. Your max (184) beats his (174). You'd likely finish 1st or 2nd.</p>
-  </div>
-  <div class="card card-warning">
-    <h3 style="margin-top:0; color:#ff6b6b;">If Arizona Wins It All</h3>
-    <p style="font-size:42px; font-weight:800; color:#ff6b6b;">~2-3%</p>
-    <p style="font-size:13px;">Suge Knight (188 max), jac #2, RamFan, Thomas9712w #2 all have Arizona. You'd miss the 32-pt championship bonus. Tough.</p>
-  </div>
-  <div class="card">
-    <h3 style="margin-top:0;">If Duke Wins It All</h3>
-    <p style="font-size:42px; font-weight:800; color:#888;">~1-2%</p>
-    <p style="font-size:13px;">Neither entry has Duke as champ. Doaners_picks and PCraig would surge. Bad scenario.</p>
-  </div>
-  <div class="card">
-    <h3 style="margin-top:0;">If Florida Wins It All</h3>
-    <p style="font-size:42px; font-weight:800; color:#888;">~2-4%</p>
-    <p style="font-size:13px;">B Crew has Florida as champ. You have Florida in Final Four which helps, but missing the 32-pt champ bonus hurts.</p>
-  </div>
-</div>
-
-<p style="text-align:center; color:#444; margin-top:40px; font-size:12px;">Analysis by Claude &bull; Updated after each game &bull; Data from Splash Sports</p>
-
+<p style="text-align:center; color:#444; margin-top:40px; font-size:12px;">Auto-updated by GitHub Actions &bull; Data from ESPN API &bull; Analysis by Claude</p>
 </body>
 </html>

@@ -1,0 +1,70 @@
+# =============================================================
+# March Madness Auto-Update Workflow
+# =============================================================
+#
+# ANALOGY: This file is like programming an alarm clock.
+# It tells GitHub: "Wake up a cloud computer on this schedule,
+# run my script, and save the results."
+#
+# The "cloud computer" (called a "runner") is free from GitHub.
+# It has Node.js pre-installed, so our script runs without setup.
+# =============================================================
+
+name: Update March Madness Dashboard
+
+# WHEN to run — the alarm clock settings
+on:
+  schedule:
+    # Cron syntax: minute hour day-of-month month day-of-week
+    # "*/30 14-23 * 3-4 *" means:
+    #   - Every 30 minutes (*/30)
+    #   - Between 2 PM and 11 PM UTC (14-23) — covers afternoon/evening ET games
+    #   - Every day (* for day-of-month)
+    #   - In March and April (3-4) — tournament months
+    #   - Any day of the week (*)
+    - cron: '*/30 14-23 * 3-4 *'
+
+  # Also allow manual triggering — like a "run now" button
+  # You can click this in GitHub > Actions > "Update March Madness Dashboard" > "Run workflow"
+  workflow_dispatch:
+
+# WHAT to do when the alarm goes off
+jobs:
+  update:
+    runs-on: ubuntu-latest  # Use a free Linux cloud computer
+
+    # Give the job permission to push changes back to the repo
+    permissions:
+      contents: write
+
+    steps:
+      # Step 1: Check out the code (like opening the filing cabinet)
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Node.js (the robot's brain)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Step 3: Run the update script (the robot does its job)
+      - name: Run update script
+        run: node update.js
+
+      # Step 4: If anything changed, save it back (publish the new edition)
+      # "git diff --quiet" returns exit code 1 if there ARE changes
+      # The "|| true" prevents the step from failing if there are no changes
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json index.html
+          if git diff --staged --quiet; then
+            echo "No changes to commit — dashboard is up to date."
+          else
+            # Build a commit message from the update script's output
+            git commit -m "Auto-update: $(date -u +'%b %d, %H:%M UTC')"
+            git push
+            echo "Dashboard updated and pushed!"
+          fi
