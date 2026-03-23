@@ -766,6 +766,8 @@ async function main() {
 
   if (newResults.length === 0) {
     console.log('No new games found. Dashboard is up to date.');
+        data.lastUpdated = now.toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+        fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
     // Still regenerate HTML in case this is the first run
     const standings = calculateStandings(data);
     const probs = runMonteCarlo(data);
