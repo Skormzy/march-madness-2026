@@ -50,7 +50,7 @@ jobs:
 
       # Step 3: Run the update script (the robot does its job)
       - name: Run update script
-        run: node update.jsh
+        run: node update.js
 
       # Step 4: If anything changed, save it back (publish the new edition)
       # "git diff --quiet" returns exit code 1 if there ARE changes
