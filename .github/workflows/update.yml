@@ -16,13 +16,13 @@ name: Update March Madness Dashboard
 on:
   schedule:
     # Cron syntax: minute hour day-of-month month day-of-week
-    # "*/30 14-23 * 3-4 *" means:
+    # "*/30 * * 3-4 *" means:
     #   - Every 30 minutes (*/30)
     #   - Between 2 PM and 11 PM UTC (14-23) — covers afternoon/evening ET games
     #   - Every day (* for day-of-month)
     #   - In March and April (3-4) — tournament months
     #   - Any day of the week (*)
-    - cron: '*/30 14-23 * 3-4 *'
+    - cron: '*/30 * * 3-4 *'
 
   # Also allow manual triggering — like a "run now" button
   # You can click this in GitHub > Actions > "Update March Madness Dashboard" > "Run workflow"
@@ -50,7 +50,7 @@ jobs:
 
       # Step 3: Run the update script (the robot does its job)
       - name: Run update script
-        run: node update.js
+        run: node update.jsh
 
       # Step 4: If anything changed, save it back (publish the new edition)
       # "git diff --quiet" returns exit code 1 if there ARE changes
