@@ -53,19 +53,19 @@
 </head>
 <body>
 
-<h1>White Owl March Madness 2026 <span class="update-badge">Last updated: Apr 4, 11:52 PM UTC</span></h1>
+<h1>White Owl March Madness 2026 <span class="update-badge">Last updated: Apr 5, 1:23 AM UTC</span></h1>
 <p class="subtitle">Seymour's Pool Tracker &bull; 40 Entries &bull; Auto-updated via GitHub Actions</p>
 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-label">Your Win Probability</div>
   <div class="hero-prob">0%</div>
-  <div class="hero-sublabel">Seymour #2 &bull; T-4th place &bull; 9 pts behind 1st</div>
+  <div class="hero-sublabel">Seymour #2 &bull; T-6th place &bull; 25 pts behind 1st</div>
   <div class="hero-status">BRACKET ALIVE &mdash; MICHIGAN STILL IN</div>
   <div class="hero-stats">
     <div class="hero-stat"><div class="hero-stat-val">90</div><div class="hero-stat-label">Current Points</div></div>
     <div class="hero-stat"><div class="hero-stat-val">138</div><div class="hero-stat-label">Max Possible</div></div>
-    <div class="hero-stat"><div class="hero-stat-val">T-4th</div><div class="hero-stat-label">Current Place</div></div>
+    <div class="hero-stat"><div class="hero-stat-val">T-6th</div><div class="hero-stat-label">Current Place</div></div>
     <div class="hero-stat"><div class="hero-stat-val">48</div><div class="hero-stat-label">Points Remaining</div></div>
   </div>
 </div>
@@ -74,13 +74,13 @@
 <div class="bottom-line-card">
   <h3 style="color:#51cf66; margin-top:0;">The Bottom Line</h3>
   <div class="bl-item"><div class="bl-icon">&#127942;</div>
-    <div class="bl-text"><strong>Gap is growing, but not out of it.</strong> You're 9 pts behind BlairMac (99 pts). Your 0% win probability is below the 2.5% pool average. 48 pts still in play.</div>
+    <div class="bl-text"><strong>Gap is growing, but not out of it.</strong> You're 25 pts behind BlairMac (115 pts). Your 0% win probability is below the 2.5% pool average. 48 pts still in play.</div>
   </div>
   <div class="bl-item"><div class="bl-icon">&#127936;</div>
     <div class="bl-text"><strong>Your champion: Michigan (ALIVE).</strong> Michigan is still in the tournament. Every Michigan win adds to your point total and boosts your probability.</div>
   </div>
   <div class="bl-item"><div class="bl-icon">&#9888;&#65039;</div>
-    <div class="bl-text"><strong>Biggest threat: BlairMac</strong> (1st, 99 pts, Arizona champ, 163 max).</div>
+    <div class="bl-text"><strong>Biggest threat: BlairMac</strong> (1st, 115 pts, Arizona champ, 163 max).</div>
   </div>
 </div>
 
@@ -90,8 +90,8 @@
   <div class="chart-wrapper"><canvas id="probChart"></canvas></div>
 </div>
 <script>
-const PROBS = {"Suge Knight":0,"Trevor":0,"jac #2":0,"RamFan":0,"Thomas9712w":36.7,"Thomas9712w #2":0,"Scott Carrick":0,"Janer #2":25.3,"B Crew":0,"Doaners_picks":0,"Seymour #2":0,"Billy O":0,"C6Z06":0,"PCraig":0,"B Crew #2":0,"Lisa K":0,"BlairMac #2":0,"canadiens":0,"Canman1":0,"Daniel":0,"Go Canada":0,"BlairMac":38.1,"joeyjohnson":0,"Slamdunk2026 #2":0,"Josh Carrick":0,"Go Canada #2":0,"Seagulljon":0,"Seymour":0,"RJH":0,"Slamdunk2026":0,"Kim Burns #2":0,"SimonT":0,"jac":0,"TrevorYC":0,"AL":0,"steviesizzle86":0,"Scott Carrick2":0,"Jake Carrick":0,"Janer":0,"Paul McGuigan":0};
-const probTimeline = {"labels":["Pre-Tourn.","After R1","Michigan W","MSU W","Duke W","Houston W","Gonzaga L","Illinois W","Nebraska W","Arkansas W","Purdue W","Iowa State W","St John's W","UConn W","Iowa W","Arizona W","Tennessee W","Alabama W","Iowa W","Purdue W","Illinois W","Arizona W","Duke W","Michigan W","UConn W","Tennessee W","Illinois W","Arizona W","Michigan W","UConn W"],"data":{"Seymour #2":[2.5,4.1,4.3,4.5,4.5,4.4,3.4,3.2,3.1,3,2.8,3.1,0.4,0.4,0.4,0.4,0.4,0,0,0,0,0,0,0,0,0,0,0,0,0],"Suge Knight":[2.5,1.9,1.9,2,2.2,2.4,4.2,4.8,4.6,4.5,1.7,2.2,2.5,2.5,2.5,2.5,2.5,1.4,1.2,1.2,0,0,0,0,0,0,0,0,0,0],"Trevor":[2.5,0.9,0.9,0.9,0.8,0.7,0.6,0.6,0.7,0.8,0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"jac #2":[2.5,1.9,1.9,1.9,1.8,1.7,1.5,1.5,1.8,2,1.3,1.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"Thomas9712w":[2.5,3.5,3.7,3.7,4,4.5,5.2,5.5,5.8,6.2,10.4,10.8,18.1,18.1,18.1,18.1,18.1,18.8,15.8,15.8,15.1,15.1,23,23,30,30,30.1,26.7,37.5,37.6],"Billy O":[2.5,7.9,7.9,7.9,7.5,7,6.8,6.5,6,5.8,8.1,8,9,9,9,9,9,9.7,11.4,11.4,0,0,0,0,0,0,0,0,0,0],"Scott Carrick":[2.5,4.9,4.9,4.9,4.8,4.5,4,3.8,3.6,3.5,4.8,4.5,6.9,6.9,6.9,6.9,6.9,7.1,9.3,9.3,9.7,9.7,6.6,6.6,10.2,10.2,11.3,0,0,0],"B Crew":[2.5,4.1,4.1,4.2,4,3.8,3.6,3.5,3.3,3.2,2.4,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"Doaners_picks":[2.5,4.1,4.1,4.2,4.2,4,3.9,3.8,3.6,3.5,3.4,4.6,5.3,5.3,5.3,5.3,5.3,5.4,5.5,5.5,7.5,7.5,9.9,9.9,6.4,6.4,4.3,8,7.2,0],"Slamdunk2026":[2.5,6.4,6.4,6.4,6.2,5.8,5.6,5.5,5.6,5.8,1.6,1.5,1.2,1.2,1.2,1.2,1.2,1.5,0.7,0.7,0,0,0,0,0,0,0,0,0,0],"Josh Carrick":[2.5,6.2,6.2,6.2,5.8,5.4,5.2,5,4.8,4.5,5.4,7.9,8,8,8,8,8,8.4,7.6,7.6,7.6,7.6,6.7,6.7,0,0,0,0,0,0]}};
+const PROBS = {"Suge Knight":0,"Trevor":0,"jac #2":0,"RamFan":0,"Thomas9712w":26.5,"Thomas9712w #2":0,"Scott Carrick":0,"Janer #2":47.1,"B Crew":0,"Doaners_picks":0,"Seymour #2":0,"Billy O":0,"C6Z06":0,"PCraig":0,"B Crew #2":0,"Lisa K":0,"BlairMac #2":0,"canadiens":0,"Canman1":0,"Daniel":0,"Go Canada":0,"BlairMac":26.4,"joeyjohnson":0,"Slamdunk2026 #2":0,"Josh Carrick":0,"Go Canada #2":0,"Seagulljon":0,"Seymour":0,"RJH":0,"Slamdunk2026":0,"Kim Burns #2":0,"SimonT":0,"jac":0,"TrevorYC":0,"AL":0,"steviesizzle86":0,"Scott Carrick2":0,"Jake Carrick":0,"Janer":0,"Paul McGuigan":0};
+const probTimeline = {"labels":["Pre-Tourn.","After R1","Michigan W","MSU W","Duke W","Houston W","Gonzaga L","Illinois W","Nebraska W","Arkansas W","Purdue W","Iowa State W","St John's W","UConn W","Iowa W","Arizona W","Tennessee W","Alabama W","Iowa W","Purdue W","Illinois W","Arizona W","Duke W","Michigan W","UConn W","Tennessee W","Illinois W","Arizona W","Michigan W","UConn W","UConn W"],"data":{"Seymour #2":[2.5,4.1,4.3,4.5,4.5,4.4,3.4,3.2,3.1,3,2.8,3.1,0.4,0.4,0.4,0.4,0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"Suge Knight":[2.5,1.9,1.9,2,2.2,2.4,4.2,4.8,4.6,4.5,1.7,2.2,2.5,2.5,2.5,2.5,2.5,1.4,1.2,1.2,0,0,0,0,0,0,0,0,0,0,0],"Trevor":[2.5,0.9,0.9,0.9,0.8,0.7,0.6,0.6,0.7,0.8,0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"jac #2":[2.5,1.9,1.9,1.9,1.8,1.7,1.5,1.5,1.8,2,1.3,1.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"Thomas9712w":[2.5,3.5,3.7,3.7,4,4.5,5.2,5.5,5.8,6.2,10.4,10.8,18.1,18.1,18.1,18.1,18.1,18.8,15.8,15.8,15.1,15.1,23,23,30,30,30.1,26.7,37.5,37.6,26.5],"Billy O":[2.5,7.9,7.9,7.9,7.5,7,6.8,6.5,6,5.8,8.1,8,9,9,9,9,9,9.7,11.4,11.4,0,0,0,0,0,0,0,0,0,0,0],"Scott Carrick":[2.5,4.9,4.9,4.9,4.8,4.5,4,3.8,3.6,3.5,4.8,4.5,6.9,6.9,6.9,6.9,6.9,7.1,9.3,9.3,9.7,9.7,6.6,6.6,10.2,10.2,11.3,0,0,0,0],"B Crew":[2.5,4.1,4.1,4.2,4,3.8,3.6,3.5,3.3,3.2,2.4,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"Doaners_picks":[2.5,4.1,4.1,4.2,4.2,4,3.9,3.8,3.6,3.5,3.4,4.6,5.3,5.3,5.3,5.3,5.3,5.4,5.5,5.5,7.5,7.5,9.9,9.9,6.4,6.4,4.3,8,7.2,0,0],"Slamdunk2026":[2.5,6.4,6.4,6.4,6.2,5.8,5.6,5.5,5.6,5.8,1.6,1.5,1.2,1.2,1.2,1.2,1.2,1.5,0.7,0.7,0,0,0,0,0,0,0,0,0,0,0],"Josh Carrick":[2.5,6.2,6.2,6.2,5.8,5.4,5.2,5,4.8,4.5,5.4,7.9,8,8,8,8,8,8.4,7.6,7.6,7.6,7.6,6.7,6.7,0,0,0,0,0,0,0]}};
 const CHART_ENTRIES = [{"name":"Seymour #2","color":"#00e5cc","width":4,"dash":"[]"},{"name":"Seymour","color":"rgba(0,229,204,0.4)","width":2,"dash":"[5,5]","hidden":true},{"name":"Thomas9712w","color":"#22d3ee","width":2,"dash":"[]"},{"name":"Suge Knight","color":"#ff6b6b","width":2,"dash":"[4,4]"},{"name":"Billy O","color":"#ffd43b","width":2,"dash":"[]"},{"name":"Slamdunk2026","color":"#a78bfa","width":2,"dash":"[]"},{"name":"Scott Carrick","color":"#f97316","width":1.5,"dash":"[]"},{"name":"Daniel","color":"#84cc16","width":1.5,"dash":"[]"},{"name":"B Crew","color":"#ec4899","width":1.5,"dash":"[]"},{"name":"Doaners_picks","color":"#64748b","width":1.5,"dash":"[4,4]"}];
 
 const datasets = CHART_ENTRIES.map(e => ({
@@ -117,7 +117,7 @@ new Chart(document.getElementById('probChart').getContext('2d'), {
     },
     scales: {
       x: { ticks: { color: '#888', font: { size: 11 } }, grid: { color: 'rgba(30,42,54,0.5)' } },
-      y: { min: 0, max: 40, ticks: { color: '#888', font: { size: 11 }, callback: v => v + '%', stepSize: 1 }, grid: { color: 'rgba(30,42,54,0.5)' } }
+      y: { min: 0, max: 49, ticks: { color: '#888', font: { size: 11 }, callback: v => v + '%', stepSize: 1 }, grid: { color: 'rgba(30,42,54,0.5)' } }
     }
   }
 });
@@ -128,28 +128,28 @@ new Chart(document.getElementById('probChart').getContext('2d'), {
 <div class="card">
 <table class="standings-table">
   <tr><th>#</th><th>Entry</th><th>Pts</th><th>Max</th><th>Champion</th><th>Win %</th></tr>
-  <tr><td>1</td><td>BlairMac <span class="tag tag-leader">LEADER</span></td><td>99</td><td>163</td><td>Arizona</td><td style="color:#ffd43b;">38.1%</td></tr>
-  <tr><td>2</td><td>Thomas9712w</td><td>93</td><td>141</td><td>Michigan</td><td style="color:#ffd43b;">36.7%</td></tr>
-  <tr><td>3</td><td>Thomas9712w #2</td><td>91</td><td>139</td><td>Arizona</td><td style="color:#ffd43b;">0%</td></tr>
-  <tr class="you"><td>4</td><td>Seymour #2 <span class="tag tag-you">YOU</span></td><td>90</td><td>138</td><td>Michigan</td><td style="color:#00e5cc;font-weight:bold;">0%</td></tr>
-  <tr><td>5</td><td>RamFan</td><td>89</td><td>137</td><td>Arizona</td><td>0%</td></tr>
-  <tr><td>5</td><td>Daniel</td><td>89</td><td>137</td><td>Arizona</td><td>0%</td></tr>
-  <tr><td>7</td><td>Lisa K</td><td>88</td><td>136</td><td>Arizona</td><td>0%</td></tr>
-  <tr><td>8</td><td>jac #2</td><td>87</td><td>135</td><td>Arizona</td><td>0%</td></tr>
-  <tr><td>8</td><td>SimonT</td><td>87</td><td>103</td><td>Duke</td><td>0%</td></tr>
-  <tr class="you"><td>10</td><td>Seymour <span class="tag tag-you">YOU</span></td><td>84</td><td>132</td><td>Arizona</td><td style="color:#00e5cc;font-weight:bold;">0%</td></tr>
-  <tr><td>10</td><td>Go Canada #2</td><td>84</td><td>100</td><td>Duke</td><td>0%</td></tr>
-  <tr><td>10</td><td>Paul McGuigan</td><td>84</td><td>100</td><td>Duke</td><td>0%</td></tr>
-  <tr><td>13</td><td>steviesizzle86</td><td>82</td><td>130</td><td>Arizona</td><td>0%</td></tr>
-  <tr><td>13</td><td>B Crew</td><td>82</td><td>98</td><td>Florida</td><td>0%</td></tr>
-  <tr><td>15</td><td>Janer #2</td><td>81</td><td>145</td><td>UConn</td><td>25.3%</td></tr>
-  <tr><td>15</td><td>Go Canada</td><td>81</td><td>129</td><td>Michigan</td><td>0%</td></tr>
-  <tr><td>17</td><td>PCraig</td><td>80</td><td>80</td><td>Duke</td><td>0%</td></tr>
-  <tr><td>18</td><td>Seagulljon</td><td>78</td><td>142</td><td>UConn</td><td>0%</td></tr>
-  <tr><td>18</td><td>Doaners_picks</td><td>78</td><td>94</td><td>Duke</td><td>0%</td></tr>
-  <tr><td>20</td><td>Canman1</td><td>77</td><td>125</td><td>Arizona</td><td>0%</td></tr>
+  <tr><td>1</td><td>BlairMac <span class="tag tag-leader">LEADER</span></td><td>115</td><td>163</td><td>Arizona</td><td style="color:#ffd43b;">26.4%</td></tr>
+  <tr><td>2</td><td>Janer #2</td><td>97</td><td>145</td><td>UConn</td><td style="color:#ffd43b;">47.1%</td></tr>
+  <tr><td>3</td><td>Seagulljon</td><td>94</td><td>142</td><td>UConn</td><td style="color:#ffd43b;">0%</td></tr>
+  <tr><td>4</td><td>Thomas9712w</td><td>93</td><td>141</td><td>Michigan</td><td>26.5%</td></tr>
+  <tr><td>5</td><td>Thomas9712w #2</td><td>91</td><td>139</td><td>Arizona</td><td>0%</td></tr>
+  <tr class="you"><td>6</td><td>Seymour #2 <span class="tag tag-you">YOU</span></td><td>90</td><td>138</td><td>Michigan</td><td style="color:#00e5cc;font-weight:bold;">0%</td></tr>
+  <tr><td>7</td><td>RamFan</td><td>89</td><td>137</td><td>Arizona</td><td>0%</td></tr>
+  <tr><td>7</td><td>Daniel</td><td>89</td><td>137</td><td>Arizona</td><td>0%</td></tr>
+  <tr><td>9</td><td>Lisa K</td><td>88</td><td>136</td><td>Arizona</td><td>0%</td></tr>
+  <tr><td>10</td><td>jac #2</td><td>87</td><td>135</td><td>Arizona</td><td>0%</td></tr>
+  <tr><td>10</td><td>SimonT</td><td>87</td><td>103</td><td>Duke</td><td>0%</td></tr>
+  <tr class="you"><td>12</td><td>Seymour <span class="tag tag-you">YOU</span></td><td>84</td><td>132</td><td>Arizona</td><td style="color:#00e5cc;font-weight:bold;">0%</td></tr>
+  <tr><td>12</td><td>Go Canada #2</td><td>84</td><td>100</td><td>Duke</td><td>0%</td></tr>
+  <tr><td>12</td><td>Paul McGuigan</td><td>84</td><td>100</td><td>Duke</td><td>0%</td></tr>
+  <tr><td>15</td><td>joeyjohnson</td><td>83</td><td>115</td><td>UConn</td><td>0%</td></tr>
+  <tr><td>16</td><td>steviesizzle86</td><td>82</td><td>130</td><td>Arizona</td><td>0%</td></tr>
+  <tr><td>16</td><td>B Crew</td><td>82</td><td>98</td><td>Florida</td><td>0%</td></tr>
+  <tr><td>18</td><td>Go Canada</td><td>81</td><td>129</td><td>Michigan</td><td>0%</td></tr>
+  <tr><td>19</td><td>PCraig</td><td>80</td><td>80</td><td>Duke</td><td>0%</td></tr>
+  <tr><td>20</td><td>Doaners_picks</td><td>78</td><td>94</td><td>Duke</td><td>0%</td></tr>
 </table>
-<p style="font-size:12px; color:#666; margin-top:10px;">Win% estimated via Monte Carlo simulation (10K runs). Seymour is 10th (0%).</p>
+<p style="font-size:12px; color:#666; margin-top:10px;">Win% estimated via Monte Carlo simulation (10K runs). Seymour is 12th (0%).</p>
 </div>
 
 <!-- GAMES -->
