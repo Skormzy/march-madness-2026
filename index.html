@@ -53,7 +53,7 @@
 </head>
 <body>
 
-<h1>White Owl March Madness 2026 <span class="update-badge">Last updated: Apr 5, 4:59 PM UTC</span></h1>
+<h1>White Owl March Madness 2026 <span class="update-badge">Last updated: Apr 5, 5:35 PM UTC</span></h1>
 <p class="subtitle">Seymour's Pool Tracker &bull; 40 Entries &bull; Auto-updated via GitHub Actions</p>
 
 <!-- HERO -->
@@ -90,7 +90,7 @@
   <div class="chart-wrapper"><canvas id="probChart"></canvas></div>
 </div>
 <script>
-const PROBS = {"Suge Knight":0,"Trevor":0,"jac #2":0,"RamFan":0,"Thomas9712w":53.1,"Thomas9712w #2":0,"Scott Carrick":0,"Janer #2":46.9,"B Crew":0,"Doaners_picks":0,"Seymour #2":0,"Billy O":0,"C6Z06":0,"PCraig":0,"B Crew #2":0,"Lisa K":0,"BlairMac #2":0,"canadiens":0,"Canman1":0,"Daniel":0,"Go Canada":0,"BlairMac":0,"joeyjohnson":0,"Slamdunk2026 #2":0,"Josh Carrick":0,"Go Canada #2":0,"Seagulljon":0,"Seymour":0,"RJH":0,"Slamdunk2026":0,"Kim Burns #2":0,"SimonT":0,"jac":0,"TrevorYC":0,"AL":0,"steviesizzle86":0,"Scott Carrick2":0,"Jake Carrick":0,"Janer":0,"Paul McGuigan":0};
+const PROBS = {"Suge Knight":0,"Trevor":0,"jac #2":0,"RamFan":0,"Thomas9712w":52.9,"Thomas9712w #2":0,"Scott Carrick":0,"Janer #2":47.1,"B Crew":0,"Doaners_picks":0,"Seymour #2":0,"Billy O":0,"C6Z06":0,"PCraig":0,"B Crew #2":0,"Lisa K":0,"BlairMac #2":0,"canadiens":0,"Canman1":0,"Daniel":0,"Go Canada":0,"BlairMac":0,"joeyjohnson":0,"Slamdunk2026 #2":0,"Josh Carrick":0,"Go Canada #2":0,"Seagulljon":0,"Seymour":0,"RJH":0,"Slamdunk2026":0,"Kim Burns #2":0,"SimonT":0,"jac":0,"TrevorYC":0,"AL":0,"steviesizzle86":0,"Scott Carrick2":0,"Jake Carrick":0,"Janer":0,"Paul McGuigan":0};
 const probTimeline = {"labels":["Pre-Tourn.","After R1","Michigan W","MSU W","Duke W","Houston W","Gonzaga L","Illinois W","Nebraska W","Arkansas W","Purdue W","Iowa State W","St John's W","UConn W","Iowa W","Arizona W","Tennessee W","Alabama W","Iowa W","Purdue W","Illinois W","Arizona W","Duke W","Michigan W","UConn W","Tennessee W","Illinois W","Arizona W","Michigan W","UConn W","UConn W","Michigan W"],"data":{"Seymour #2":[2.5,4.1,4.3,4.5,4.5,4.4,3.4,3.2,3.1,3,2.8,3.1,0.4,0.4,0.4,0.4,0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"Suge Knight":[2.5,1.9,1.9,2,2.2,2.4,4.2,4.8,4.6,4.5,1.7,2.2,2.5,2.5,2.5,2.5,2.5,1.4,1.2,1.2,0,0,0,0,0,0,0,0,0,0,0,0],"Trevor":[2.5,0.9,0.9,0.9,0.8,0.7,0.6,0.6,0.7,0.8,0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"jac #2":[2.5,1.9,1.9,1.9,1.8,1.7,1.5,1.5,1.8,2,1.3,1.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"Thomas9712w":[2.5,3.5,3.7,3.7,4,4.5,5.2,5.5,5.8,6.2,10.4,10.8,18.1,18.1,18.1,18.1,18.1,18.8,15.8,15.8,15.1,15.1,23,23,30,30,30.1,26.7,37.5,37.6,26.5,54],"Billy O":[2.5,7.9,7.9,7.9,7.5,7,6.8,6.5,6,5.8,8.1,8,9,9,9,9,9,9.7,11.4,11.4,0,0,0,0,0,0,0,0,0,0,0,0],"Scott Carrick":[2.5,4.9,4.9,4.9,4.8,4.5,4,3.8,3.6,3.5,4.8,4.5,6.9,6.9,6.9,6.9,6.9,7.1,9.3,9.3,9.7,9.7,6.6,6.6,10.2,10.2,11.3,0,0,0,0,0],"B Crew":[2.5,4.1,4.1,4.2,4,3.8,3.6,3.5,3.3,3.2,2.4,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"Doaners_picks":[2.5,4.1,4.1,4.2,4.2,4,3.9,3.8,3.6,3.5,3.4,4.6,5.3,5.3,5.3,5.3,5.3,5.4,5.5,5.5,7.5,7.5,9.9,9.9,6.4,6.4,4.3,8,7.2,0,0,0],"Slamdunk2026":[2.5,6.4,6.4,6.4,6.2,5.8,5.6,5.5,5.6,5.8,1.6,1.5,1.2,1.2,1.2,1.2,1.2,1.5,0.7,0.7,0,0,0,0,0,0,0,0,0,0,0,0],"Josh Carrick":[2.5,6.2,6.2,6.2,5.8,5.4,5.2,5,4.8,4.5,5.4,7.9,8,8,8,8,8,8.4,7.6,7.6,7.6,7.6,6.7,6.7,0,0,0,0,0,0,0,0]}};
 const CHART_ENTRIES = [{"name":"Seymour #2","color":"#00e5cc","width":4,"dash":"[]"},{"name":"Seymour","color":"rgba(0,229,204,0.4)","width":2,"dash":"[5,5]","hidden":true},{"name":"Thomas9712w","color":"#22d3ee","width":2,"dash":"[]"},{"name":"Suge Knight","color":"#ff6b6b","width":2,"dash":"[4,4]"},{"name":"Billy O","color":"#ffd43b","width":2,"dash":"[]"},{"name":"Slamdunk2026","color":"#a78bfa","width":2,"dash":"[]"},{"name":"Scott Carrick","color":"#f97316","width":1.5,"dash":"[]"},{"name":"Daniel","color":"#84cc16","width":1.5,"dash":"[]"},{"name":"B Crew","color":"#ec4899","width":1.5,"dash":"[]"},{"name":"Doaners_picks","color":"#64748b","width":1.5,"dash":"[4,4]"}];
 
@@ -129,12 +129,12 @@ new Chart(document.getElementById('probChart').getContext('2d'), {
 <table class="standings-table">
   <tr><th>#</th><th>Entry</th><th>Pts</th><th>Max</th><th>Champion</th><th>Win %</th></tr>
   <tr><td>1</td><td>BlairMac <span class="tag tag-leader">LEADER</span></td><td>115</td><td>115</td><td>Arizona</td><td style="color:#ffd43b;">0%</td></tr>
-  <tr><td>2</td><td>Thomas9712w</td><td>109</td><td>141</td><td>Michigan</td><td style="color:#ffd43b;">53.1%</td></tr>
+  <tr><td>2</td><td>Thomas9712w</td><td>109</td><td>141</td><td>Michigan</td><td style="color:#ffd43b;">52.9%</td></tr>
   <tr class="you"><td>3</td><td>Seymour #2 <span class="tag tag-you">YOU</span></td><td>106</td><td>138</td><td>Michigan</td><td style="color:#00e5cc;font-weight:bold;">0%</td></tr>
   <tr><td>4</td><td>SimonT</td><td>103</td><td>103</td><td>Duke</td><td>0%</td></tr>
   <tr><td>5</td><td>Go Canada #2</td><td>100</td><td>100</td><td>Duke</td><td>0%</td></tr>
   <tr><td>5</td><td>Paul McGuigan</td><td>100</td><td>100</td><td>Duke</td><td>0%</td></tr>
-  <tr><td>7</td><td>Janer #2</td><td>97</td><td>129</td><td>UConn</td><td>46.9%</td></tr>
+  <tr><td>7</td><td>Janer #2</td><td>97</td><td>129</td><td>UConn</td><td>47.1%</td></tr>
   <tr><td>7</td><td>Go Canada</td><td>97</td><td>129</td><td>Michigan</td><td>0%</td></tr>
   <tr><td>9</td><td>Seagulljon</td><td>94</td><td>126</td><td>UConn</td><td>0%</td></tr>
   <tr><td>10</td><td>Slamdunk2026 #2</td><td>93</td><td>125</td><td>Michigan</td><td>0%</td></tr>
